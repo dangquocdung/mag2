@@ -1,0 +1,13 @@
+{
+    "name": "LaraMag",
+    "description": "Theme for magazine/news site.",
+    "author": "Sang Nguyen",
+    "version": "1.0.1",
+    "required_plugins": [
+        "blog",
+        "contact",
+        "gallery",
+        "language",
+        "simple-slider"
+    ]
+}

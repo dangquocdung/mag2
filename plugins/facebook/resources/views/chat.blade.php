@@ -1,0 +1,1 @@
+<div class="fb-customerchat" page_id="{{ setting('facebook_page_id') }}" minimized="{{ setting('facebook_chat_minimized', false) }}"></div>
