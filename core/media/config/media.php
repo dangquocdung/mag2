@@ -92,7 +92,7 @@ return [
             'youtube',
         ],
     ],
-    'max_file_size_upload' => env('RV_MEDIA_MAX_FILE_SIZE_UPLOAD', 64 * 1024), // Maximum size to upload
+    'max_file_size_upload' => env('RV_MEDIA_MAX_FILE_SIZE_UPLOAD', 4 * 1024 * 1024), // Maximum size to upload
     'default-img' => env('RV_MEDIA_DEFAULT_IMAGE', '/vendor/core/images/placeholder.png'), // Default image
     'sidebar_display' => env('RV_MEDIA_SIDEBAR_DISPLAY', 'horizontal'), // Use "vertical" or "horizontal"
 ];
