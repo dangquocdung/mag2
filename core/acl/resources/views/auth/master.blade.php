@@ -9,10 +9,10 @@
         @yield('content')
     </div>
     <div class="copyright">
-        <p>
+        {{--  <p>
             {!! trans('core.base::layouts.copyright', ['year' => Carbon\Carbon::now()->format('Y'), 'company' => config('core.base.general.base_name'), 'version' => get_cms_version()]) !!}
-        </p>
-        <p>
+        </p>  --}}
+        {{--  <p>
             @foreach (Assets::getAdminLocales() as $key => $value)
                 <span @if (app()->getLocale() == $key) class="active" @endif>
                     <a href="{{ route('admin.language', $key) }}">
@@ -20,6 +20,6 @@
                     </a>
                 </span>
             @endforeach
-        </p>
+        </p>  --}}
     </div>
 @stop
