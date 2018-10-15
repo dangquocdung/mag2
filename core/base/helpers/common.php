@@ -425,7 +425,7 @@ if (!function_exists('get_cms_version')) {
         try {
             return get_file_data(base_path('/core/VERSION'), false);
         } catch (Exception $exception) {
-            return '3.3';
+            return '1.1';
         }
     }
 }
