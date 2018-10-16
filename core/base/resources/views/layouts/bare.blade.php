@@ -14,7 +14,7 @@
 
         <div class="d-none d-sm-block col-sm-4 text-right">
             <strong>{{ trans('core.base::layouts.powered_by') }}</strong>
-            <a href="http://www.botble.com"><img src="{{ url('/images/logos/logo.png') }}"/></a>
+            <a href="http://www.dungthinh.com"><img src="{{ url('/images/logos/logo.png') }}"/></a>
         </div>
     </div>
     <!-- /footer -->
