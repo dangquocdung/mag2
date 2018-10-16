@@ -48,7 +48,7 @@ class HookServiceProvider extends ServiceProvider
             return null;
         }
 
-        return view('plugins.simple-slider::sliders', ['sliders' => $simple_slider->slider_items]);
+        return view('plugins.simple-slider::sliders', ['sliders' => $simple_slider->sliderItems]);
     }
 
     /**
