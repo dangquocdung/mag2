@@ -38,7 +38,7 @@ class Role extends EloquentRole
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function users()
     {
@@ -47,7 +47,7 @@ class Role extends EloquentRole
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function userCreated()
     {

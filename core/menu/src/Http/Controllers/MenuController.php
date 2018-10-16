@@ -46,7 +46,7 @@ class MenuController extends BaseController
      * @param MenuInterface $menuRepository
      * @param MenuNodeInterface $menuNodeRepository
      * @param CacheManager $cache
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(
         MenuInterface $menuRepository,
@@ -62,7 +62,7 @@ class MenuController extends BaseController
     /**
      * @param MenuTable $dataTable
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function getList(MenuTable $dataTable)
@@ -74,7 +74,7 @@ class MenuController extends BaseController
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getCreate(FormBuilder $formBuilder)
     {
@@ -87,7 +87,7 @@ class MenuController extends BaseController
      * @param MenuRequest $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen, Tedozi Manson
+     * @author Dung Thinh, Tedozi Manson
      */
     public function postCreate(MenuRequest $request, BaseHttpResponse $response)
     {
@@ -112,7 +112,7 @@ class MenuController extends BaseController
      * @param Request $request
      * @param FormBuilder $formBuilder
      * @return string
-     * @author Sang Nguyen, Tedozi Manson
+     * @author Dung Thinh, Tedozi Manson
      */
     public function getEdit($id, Request $request, FormBuilder $formBuilder)
     {
@@ -146,7 +146,7 @@ class MenuController extends BaseController
      * @param $id
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen, Tedozi Manson
+     * @author Dung Thinh, Tedozi Manson
      */
     public function postEdit(MenuRequest $request, $id, BaseHttpResponse $response)
     {
@@ -172,7 +172,7 @@ class MenuController extends BaseController
      * @param $id
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDelete(Request $request, $id, BaseHttpResponse $response)
     {
@@ -195,7 +195,7 @@ class MenuController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postDeleteMany(Request $request, BaseHttpResponse $response)
     {

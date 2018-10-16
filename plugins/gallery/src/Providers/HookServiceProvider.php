@@ -13,7 +13,7 @@ class HookServiceProvider extends ServiceProvider
     protected $app;
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function boot()
@@ -25,7 +25,7 @@ class HookServiceProvider extends ServiceProvider
 
     /**
      * @param $screen
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addGalleryBox($screen)
     {
@@ -36,7 +36,7 @@ class HookServiceProvider extends ServiceProvider
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function galleryMetaField()
@@ -52,7 +52,7 @@ class HookServiceProvider extends ServiceProvider
     /**
      * @param $shortcode
      * @return null
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function render($shortcode)
     {

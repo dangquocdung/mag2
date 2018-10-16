@@ -672,7 +672,7 @@ class Theme implements ThemeContract
      * @param  closure $callback
      * @param string $layout
      * @return void
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function composer($view, $callback, $layout = null)
@@ -985,7 +985,7 @@ class Theme implements ThemeContract
         }
 
         $content->withHeaders([
-            'Author' => 'Sang Nguyen (sangnguyenplus@gmail.com)',
+            'Author' => 'Dung Thinh (sangnguyenplus@gmail.com)',
             'Author-Team' => 'https://botble.com',
             'CMS' => 'Botble CMS',
             'CMS-Version' => get_cms_version(),
@@ -996,7 +996,7 @@ class Theme implements ThemeContract
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function header()
     {
@@ -1005,7 +1005,7 @@ class Theme implements ThemeContract
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function footer()
     {
@@ -1036,7 +1036,7 @@ class Theme implements ThemeContract
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @param $path
      */
     protected function handleViewNotFound($path)

@@ -18,7 +18,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  * Class AuditLogServiceProvider
  * @package Botble\AuditLog
- * @author Sang Nguyen
+ * @author Dung Thinh
  * @since 02/07/2016 09:05 AM
  */
 class AuditLogServiceProvider extends ServiceProvider
@@ -31,7 +31,7 @@ class AuditLogServiceProvider extends ServiceProvider
     protected $app;
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function register()
     {
@@ -52,7 +52,7 @@ class AuditLogServiceProvider extends ServiceProvider
 
     /**
      * Boot the service provider.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {

@@ -17,7 +17,7 @@ class Authenticate extends BaseAuthenticate
      * @param  Closure $next
      * @param array $guards
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Auth\AuthenticationException
      */
     public function handle($request, Closure $next, ...$guards)

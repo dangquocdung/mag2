@@ -43,7 +43,7 @@ class RequestLogTable extends TableAbstract
      * Display ajax response.
      *
      * @return \Illuminate\Http\JsonResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function ajax()
     {
@@ -68,7 +68,7 @@ class RequestLogTable extends TableAbstract
      * Get the query object to be processed by datatables.
      *
      * @return \Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function query()
@@ -86,7 +86,7 @@ class RequestLogTable extends TableAbstract
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function columns()
     {
@@ -114,7 +114,7 @@ class RequestLogTable extends TableAbstract
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function buttons()

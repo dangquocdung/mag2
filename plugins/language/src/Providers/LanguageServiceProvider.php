@@ -42,7 +42,7 @@ class LanguageServiceProvider extends ServiceProvider
     protected $app;
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function register()
     {
@@ -82,7 +82,7 @@ class LanguageServiceProvider extends ServiceProvider
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {
@@ -156,7 +156,7 @@ class LanguageServiceProvider extends ServiceProvider
 
     /**
      * @param $screen
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addLanguageBox($screen)
     {
@@ -191,7 +191,7 @@ class LanguageServiceProvider extends ServiceProvider
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function languageMetaField()
@@ -282,7 +282,7 @@ class LanguageServiceProvider extends ServiceProvider
      * @param $value
      * @param $languages
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function checkCurrentLanguage($languages, $value)
     {
@@ -320,7 +320,7 @@ class LanguageServiceProvider extends ServiceProvider
      * @param \Illuminate\Http\Request $request
      * @param \Eloquent | null $data
      * @return null|string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getCurrentAdminLanguage($screen, $request, $data = null)
     {
@@ -351,7 +351,7 @@ class LanguageServiceProvider extends ServiceProvider
      * @param \Illuminate\Http\Request $request
      * @param $data
      * @return void
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      * @throws \Throwable
      */
@@ -381,7 +381,7 @@ class LanguageServiceProvider extends ServiceProvider
      * @param $headings
      * @param $screen
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addLanguageTableHeading($headings, $screen)
     {
@@ -407,7 +407,7 @@ class LanguageServiceProvider extends ServiceProvider
      * @param DataTableAbstract $data
      * @param $screen
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addLanguageColumn($data, $screen)
     {
@@ -461,7 +461,7 @@ class LanguageServiceProvider extends ServiceProvider
     /**
      * @param array $options
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function languageSwitcher($options = [])
@@ -475,7 +475,7 @@ class LanguageServiceProvider extends ServiceProvider
      * @param string $screen
      * @param \Illuminate\Database\Eloquent\Model $model
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function checkItemLanguageBeforeShow($data, $model, $screen = null)
     {
@@ -487,7 +487,7 @@ class LanguageServiceProvider extends ServiceProvider
      * @param string $screen
      * @param \Illuminate\Database\Eloquent\Model $model
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function checkItemLanguageBeforeGetAdminListItem($data, $model, $screen = null)
     {
@@ -499,7 +499,7 @@ class LanguageServiceProvider extends ServiceProvider
      * @param $screen
      * @param \Illuminate\Database\Eloquent\Builder $model
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getRelatedDataForOtherLanguage($query, $model, $screen)
     {
@@ -541,7 +541,7 @@ class LanguageServiceProvider extends ServiceProvider
     /**
      * @param $data
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addLanguageMiddlewareToPublicRoute($data)
     {
@@ -558,7 +558,7 @@ class LanguageServiceProvider extends ServiceProvider
      * @param $buttons
      * @param $screen
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.2
      */
     public function addLanguageSwitcherToTable($buttons, $screen)
@@ -604,7 +604,7 @@ class LanguageServiceProvider extends ServiceProvider
      * @param Model $model
      * @param string $screen
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.2
      */
     public function getDataByCurrentLanguage($query, $model, $screen = null)
@@ -634,7 +634,7 @@ class LanguageServiceProvider extends ServiceProvider
      * @param string $screen
      * @param $language_code
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function getDataByCurrentLanguageCode($data, $model, $screen, $language_code)
     {
@@ -659,7 +659,7 @@ class LanguageServiceProvider extends ServiceProvider
     /**
      * @param string $alert
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function registerAdminAlert($alert)

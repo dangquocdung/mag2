@@ -39,7 +39,7 @@ class UserMeta extends Eloquent
      * @param null $value
      * @param int $user_id
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public static function setMeta($key, $value = null, $user_id = 0)
     {
@@ -59,7 +59,7 @@ class UserMeta extends Eloquent
      * @param null $default_value
      * @param int $user_id
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public static function getMeta($key, $default_value = null, $user_id = 0)
     {

@@ -16,7 +16,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  * Class NoteServiceProvider
  * @package Botble\Note
- * @author Sang Nguyen
+ * @author Dung Thinh
  * @since 07/02/2016 09:50 AM
  */
 class NoteServiceProvider extends ServiceProvider
@@ -30,7 +30,7 @@ class NoteServiceProvider extends ServiceProvider
     protected $app;
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function register()
     {
@@ -51,7 +51,7 @@ class NoteServiceProvider extends ServiceProvider
 
     /**
      * Boot the service provider.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {

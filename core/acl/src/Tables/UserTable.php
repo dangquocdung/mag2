@@ -41,7 +41,7 @@ class UserTable extends TableAbstract
      * Display ajax response.
      *
      * @return \Illuminate\Http\JsonResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function ajax()
@@ -87,7 +87,7 @@ class UserTable extends TableAbstract
      * Get the query object to be processed by datatables.
      *
      * @return \Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function query()
@@ -109,7 +109,7 @@ class UserTable extends TableAbstract
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function columns()
@@ -158,7 +158,7 @@ class UserTable extends TableAbstract
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      * @throws \Throwable
      */
@@ -175,7 +175,7 @@ class UserTable extends TableAbstract
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function htmlDrawCallbackFunction()
     {
@@ -185,7 +185,7 @@ class UserTable extends TableAbstract
     /**
      * @return array
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function bulkActions(): array
     {
@@ -201,7 +201,7 @@ class UserTable extends TableAbstract
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getBulkChanges(): array
     {
@@ -236,7 +236,7 @@ class UserTable extends TableAbstract
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getFilters()
     {
@@ -247,7 +247,7 @@ class UserTable extends TableAbstract
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getUserNames()
     {
@@ -256,7 +256,7 @@ class UserTable extends TableAbstract
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getEmails()
     {
@@ -268,7 +268,7 @@ class UserTable extends TableAbstract
      * @param $input_key
      * @param $input_value
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws Exception
      */
     public function saveBulkChanges($ids, $input_key, $input_value)

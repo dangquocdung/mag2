@@ -14,7 +14,7 @@ class EmailHandlerFacade extends Facade
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.2
      */
     protected static function getFacadeAccessor()

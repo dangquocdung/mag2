@@ -28,7 +28,7 @@ class SimpleSliderServiceProvider extends ServiceProvider
     protected $app;
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function register()
     {
@@ -54,7 +54,7 @@ class SimpleSliderServiceProvider extends ServiceProvider
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {

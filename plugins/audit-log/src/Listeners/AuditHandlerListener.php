@@ -17,7 +17,7 @@ class AuditHandlerListener
     /**
      * AuditHandlerListener constructor.
      * @param AuditHistory $auditHistory
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(AuditHistory $auditHistory)
     {
@@ -29,7 +29,7 @@ class AuditHandlerListener
      *
      * @param  AuditHandlerEvent $event
      * @return void
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function handle(AuditHandlerEvent $event)
     {

@@ -15,7 +15,7 @@ class HookServiceProvider extends ServiceProvider
 
     /**
      * Boot the service provider.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function boot()
@@ -30,7 +30,7 @@ class HookServiceProvider extends ServiceProvider
     /**
      * @param string $options
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function registerTopHeaderNotification($options)
@@ -48,7 +48,7 @@ class HookServiceProvider extends ServiceProvider
      * @param $number
      * @param $menu_id
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getUnreadCount($number, $menu_id)
     {
@@ -79,7 +79,7 @@ class HookServiceProvider extends ServiceProvider
      * @param null $data
      * @return string
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addContactSetting($data = null)
     {

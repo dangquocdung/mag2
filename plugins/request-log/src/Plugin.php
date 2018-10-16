@@ -9,21 +9,21 @@ use Schema;
 class Plugin implements PluginInterface
 {
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public static function activate()
     {
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public static function deactivate()
     {
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public static function remove()
     {

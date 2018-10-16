@@ -27,7 +27,7 @@ class Cache implements CacheInterface
      * @param \Illuminate\Cache\Repository|CacheManager $cache
      * @param null $cacheGroup
      * @param array $config
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(CacheManager $cache, $cacheGroup, $config = [])
     {
@@ -49,7 +49,7 @@ class Cache implements CacheInterface
      *
      * @param string $key Cache item key
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function get($key)
     {
@@ -66,7 +66,7 @@ class Cache implements CacheInterface
      * @param mixed $value The data to store
      * @param boolean $minutes The number of minutes to store the item
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function put($key, $value, $minutes = false)
     {
@@ -87,7 +87,7 @@ class Cache implements CacheInterface
      *
      * @param string $key Cache item key
      * @return bool If cache item exists
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function has($key)
     {
@@ -103,7 +103,7 @@ class Cache implements CacheInterface
      *
      * @param $key
      * @return void
-     * @author Sang Nguyen, Tedozi Manson
+     * @author Dung Thinh, Tedozi Manson
      */
     public function storeCacheKey($key)
     {
@@ -122,7 +122,7 @@ class Cache implements CacheInterface
     /**
      * Clear cache of an object
      *
-     * @author Sang Nguyen, Tedozi Manson
+     * @author Dung Thinh, Tedozi Manson
      */
     public function flush()
     {

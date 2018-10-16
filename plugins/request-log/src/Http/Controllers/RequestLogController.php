@@ -30,7 +30,7 @@ class RequestLogController extends BaseController
     /**
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function getWidgetRequestErrors(Request $request, BaseHttpResponse $response)
@@ -44,7 +44,7 @@ class RequestLogController extends BaseController
     /**
      * @param RequestLogTable $dataTable
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function getList(RequestLogTable $dataTable)
@@ -59,7 +59,7 @@ class RequestLogController extends BaseController
      * @param $id
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDelete(Request $request, $id, BaseHttpResponse $response)
     {
@@ -81,7 +81,7 @@ class RequestLogController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postDeleteMany(Request $request, BaseHttpResponse $response)
     {

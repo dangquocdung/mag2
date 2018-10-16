@@ -145,7 +145,7 @@ CREATE TABLE `contacts` (
 
 LOCK TABLES `contacts` WRITE;
 /*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
-INSERT INTO `contacts` VALUES (1,'Sang Nguyen','sangit7b@gmail.com','0988606928','Ho Chi Minh','This is the first contact.',NULL,0,'2017-12-15 23:07:04','2017-12-15 23:07:04');
+INSERT INTO `contacts` VALUES (1,'Dung Thinh','sangit7b@gmail.com','0988606928','Ho Chi Minh','This is the first contact.',NULL,0,'2017-12-15 23:07:04','2017-12-15 23:07:04');
 /*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
 UNLOCK TABLES;
 

@@ -45,7 +45,7 @@ class PostController extends BaseController
      * @param PostInterface $postRepository
      * @param TagInterface $tagRepository
      * @param CategoryInterface $categoryRepository
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(
         PostInterface $postRepository,
@@ -61,7 +61,7 @@ class PostController extends BaseController
     /**
      * @param PostTable $dataTable
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function getList(PostTable $dataTable)
@@ -74,7 +74,7 @@ class PostController extends BaseController
     /**
      * @param FormBuilder $formBuilder
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getCreate(FormBuilder $formBuilder)
     {
@@ -93,7 +93,7 @@ class PostController extends BaseController
      * @param StoreCategoryService $categoryService
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postCreate(
         PostRequest $request,
@@ -126,7 +126,7 @@ class PostController extends BaseController
      * @param FormBuilder $formBuilder
      * @param Request $request
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getEdit($id, FormBuilder $formBuilder, Request $request)
     {
@@ -150,7 +150,7 @@ class PostController extends BaseController
      * @param StoreCategoryService $categoryService
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postEdit(
         $id,
@@ -181,7 +181,7 @@ class PostController extends BaseController
      * @param int $id
      * @param Request $request
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDelete(Request $request, $id, BaseHttpResponse $response)
     {
@@ -204,7 +204,7 @@ class PostController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postDeleteMany(Request $request, BaseHttpResponse $response)
     {
@@ -230,7 +230,7 @@ class PostController extends BaseController
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getWidgetRecentPosts(Request $request, BaseHttpResponse $response)
     {

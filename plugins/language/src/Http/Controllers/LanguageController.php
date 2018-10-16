@@ -34,7 +34,7 @@ class LanguageController extends BaseController
      * LanguageController constructor.
      * @param LanguageInterface $languageRepository
      * @param LanguageMetaInterface $languageMetaRepository
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(LanguageInterface $languageRepository, LanguageMetaInterface $languageMetaRepository)
     {
@@ -44,7 +44,7 @@ class LanguageController extends BaseController
 
     /**
      * Get list language page
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getList()
     {
@@ -62,7 +62,7 @@ class LanguageController extends BaseController
      * @param LanguageRequest $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function postStore(LanguageRequest $request, BaseHttpResponse $response)
@@ -98,7 +98,7 @@ class LanguageController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function postEdit(Request $request, BaseHttpResponse $response)
@@ -127,7 +127,7 @@ class LanguageController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postChangeItemLanguage(Request $request, BaseHttpResponse $response)
     {
@@ -174,7 +174,7 @@ class LanguageController extends BaseController
      * @param $id
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDelete(Request $request, $id, BaseHttpResponse $response)
     {
@@ -209,7 +209,7 @@ class LanguageController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getSetDefault(Request $request, BaseHttpResponse $response)
     {
@@ -229,7 +229,7 @@ class LanguageController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getLanguage(Request $request, BaseHttpResponse $response)
     {
@@ -242,7 +242,7 @@ class LanguageController extends BaseController
      * @param BaseHttpResponse $response
      * @param SettingStore $settingStore
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postEditSettings(Request $request, BaseHttpResponse $response, SettingStore $settingStore)
     {
@@ -260,7 +260,7 @@ class LanguageController extends BaseController
      * @param $code
      * @param \Botble\Language\LanguageManager $language
      * @return \Illuminate\Http\RedirectResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.2
      */
     public function getChangeDataLanguage($code, LanguageManager $language)

@@ -2,7 +2,7 @@
     "name": "Backup",
     "namespace": "Botble\\Backup\\",
     "provider": "Botble\\Backup\\Providers\\BackupServiceProvider",
-    "author": "Sang Nguyen",
+    "author": "Dung Thinh",
     "url": "http://sangnguyen.info",
     "version": "2.6",
     "description": "Backup & restore database, uploads folder"

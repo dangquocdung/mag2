@@ -14,7 +14,7 @@ class HookServiceProvider extends ServiceProvider
 
     /**
      * Boot the service provider.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {
@@ -37,7 +37,7 @@ class HookServiceProvider extends ServiceProvider
     /**
      * @param string $html
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function registerFacebookScripts($html)
@@ -48,7 +48,7 @@ class HookServiceProvider extends ServiceProvider
     /**
      * @param string $html
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function registerFacebookChat($html)
@@ -60,7 +60,7 @@ class HookServiceProvider extends ServiceProvider
      * @param $screen
      * @param $position
      * @param $object
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addFacebookBox($screen)
     {
@@ -73,7 +73,7 @@ class HookServiceProvider extends ServiceProvider
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function facebookMetaField()
@@ -83,7 +83,7 @@ class HookServiceProvider extends ServiceProvider
 
     /**
      * @param $view
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function addFacebookComments()

@@ -21,7 +21,7 @@ class HookServiceProvider extends ServiceProvider
 
     /**
      * Boot the service provider.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {
@@ -42,7 +42,7 @@ class HookServiceProvider extends ServiceProvider
      * @param string $screen
      * @param Request $request
      * @param \stdClass $data
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function handleLogin($screen, Request $request, $data)
     {
@@ -53,7 +53,7 @@ class HookServiceProvider extends ServiceProvider
      * @param string $screen
      * @param Request $request
      * @param \stdClass $data
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function handleLogout($screen, Request $request, $data)
     {
@@ -64,7 +64,7 @@ class HookServiceProvider extends ServiceProvider
      * @param string $screen
      * @param Request $request
      * @param \stdClass $data
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function handleUpdateProfile($screen, Request $request, $data)
     {
@@ -75,7 +75,7 @@ class HookServiceProvider extends ServiceProvider
      * @param string $screen
      * @param Request $request
      * @param \stdClass $data
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function handleUpdatePassword($screen, Request $request, $data)
     {
@@ -84,7 +84,7 @@ class HookServiceProvider extends ServiceProvider
 
     /**
      * @param string $screen
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function handleBackup($screen)
     {
@@ -93,7 +93,7 @@ class HookServiceProvider extends ServiceProvider
 
     /**
      * @param string $screen
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function handleRestore($screen)
     {
@@ -105,7 +105,7 @@ class HookServiceProvider extends ServiceProvider
      * @param Collection $widget_settings
      * @return array
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function registerDashboardWidgets($widgets, $widget_settings)
     {

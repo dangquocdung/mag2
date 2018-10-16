@@ -52,7 +52,7 @@ class LoginController extends BaseController
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function showLoginForm()
     {
@@ -84,7 +84,7 @@ class LoginController extends BaseController
      * @return BaseHttpResponse|\Symfony\Component\HttpFoundation\Response
      * @throws \Illuminate\Validation\ValidationException
      * @throws \Illuminate\Validation\ValidationException
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function login(Request $request)
     {
@@ -126,7 +126,7 @@ class LoginController extends BaseController
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function username()
     {

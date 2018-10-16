@@ -42,7 +42,7 @@ class PluginDeactivateCommand extends Command
      *
      * @param \Illuminate\Filesystem\Filesystem $files
      * @param SettingStore $settingStore
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(Filesystem $files, SettingStore $settingStore)
     {
@@ -55,7 +55,7 @@ class PluginDeactivateCommand extends Command
     /**
      * @throws Exception
      * @return boolean
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function handle()
     {

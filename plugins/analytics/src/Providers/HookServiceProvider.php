@@ -17,7 +17,7 @@ class HookServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap the application events.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {
@@ -33,7 +33,7 @@ class HookServiceProvider extends ServiceProvider
 
     /**
      * @return void
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function registerScripts()
     {
@@ -54,7 +54,7 @@ class HookServiceProvider extends ServiceProvider
      * @param Collection $widget_settings
      * @return array
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addGeneralWidget($widgets, $widget_settings)
     {
@@ -91,7 +91,7 @@ class HookServiceProvider extends ServiceProvider
      * @param Collection $widget_settings
      * @return array
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addPageWidget($widgets, $widget_settings)
     {
@@ -128,7 +128,7 @@ class HookServiceProvider extends ServiceProvider
      * @param Collection $widget_settings
      * @return array
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addBrowserWidget($widgets, $widget_settings)
     {
@@ -165,7 +165,7 @@ class HookServiceProvider extends ServiceProvider
      * @param Collection $widget_settings
      * @return array
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addReferrerWidget($widgets, $widget_settings)
     {
@@ -201,7 +201,7 @@ class HookServiceProvider extends ServiceProvider
      * @param null $data
      * @return string
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addAnalyticsSetting($data = null)
     {

@@ -6,7 +6,7 @@ if (!function_exists('is_image')) {
      *
      * @param $mimeType
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function is_image($mimeType)
     {
@@ -21,7 +21,7 @@ if (!function_exists('get_image_url')) {
      * @param bool $relative_path
      * @param null $default
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_image_url($url, $size = null, $relative_path = false, $default = null)
     {
@@ -74,7 +74,7 @@ if (!function_exists('rv_media_handle_upload')) {
      * @param int $folder_id
      * @param string $path
      * @return array|\Illuminate\Http\JsonResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     function rv_media_handle_upload($fileUpload, $folder_id = 0, $path = '')

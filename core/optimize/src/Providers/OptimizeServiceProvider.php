@@ -21,7 +21,7 @@ class OptimizeServiceProvider extends ServiceProvider
     protected $app;
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {

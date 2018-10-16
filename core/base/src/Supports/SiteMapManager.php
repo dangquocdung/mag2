@@ -13,7 +13,7 @@ class SiteMapManager
 
     /**
      * SiteMapManager constructor.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct()
     {
@@ -35,7 +35,7 @@ class SiteMapManager
      * @param string $priority
      * @param string $sequence
      * @return $this
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function add($url, $date, $priority = '1.0', $sequence = 'daily')
     {
@@ -48,7 +48,7 @@ class SiteMapManager
     /**
      * @param string $type
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function render($type = 'xml')
     {

@@ -44,7 +44,7 @@ class PublicController extends Controller
      * @param PageInterface $pageRepository
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function getApiSearch(
@@ -101,7 +101,7 @@ class PublicController extends Controller
      * @param string $slug
      * @param UserInterface $userRepository
      * @return \Response
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function getAuthor($slug, UserInterface $userRepository)

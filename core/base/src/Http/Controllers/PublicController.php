@@ -50,7 +50,7 @@ class PublicController extends Controller
      * @param SettingStore $settingStore
      * @return mixed
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getIndex(SettingStore $settingStore)
     {
@@ -73,7 +73,7 @@ class PublicController extends Controller
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse|\Response
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getView($key, BaseHttpResponse $response)
     {
@@ -98,7 +98,7 @@ class PublicController extends Controller
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getSiteMap()
     {
@@ -111,7 +111,7 @@ class PublicController extends Controller
     /**
      * Generate JSON feed
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getJsonFeed()
     {

@@ -2,7 +2,7 @@
     "name": "Blog",
     "namespace": "Botble\\Blog\\",
     "provider": "Botble\\Blog\\Providers\\BlogServiceProvider",
-    "author": "Sang Nguyen",
+    "author": "Dung Thinh",
     "url": "http://sangnguyen.info",
     "version": "2.7",
     "description": "Manage posts, categories, tags"

@@ -9,7 +9,7 @@ class InvalidConfiguration extends Exception
     /**
      * @return static
      * @author Freek Van der Herten
-     * @modified Sang Nguyen
+     * @modified Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public static function viewIdNotSpecified()
@@ -19,7 +19,7 @@ class InvalidConfiguration extends Exception
 
     /**
      * @return static
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public static function credentialsIsNotValid()

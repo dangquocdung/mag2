@@ -37,7 +37,7 @@ class DashboardWidgetSetting extends Eloquent
 
     /**
      * @param $value
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function setSettingsAttribute($value)
     {
@@ -47,7 +47,7 @@ class DashboardWidgetSetting extends Eloquent
     /**
      * @param $value
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getSettingsAttribute($value)
     {
@@ -63,7 +63,7 @@ class DashboardWidgetSetting extends Eloquent
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function widget()
     {

@@ -34,7 +34,7 @@ class MetaBox
      * @param string $context
      * @param string $priority
      * @param null $callback_args
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addMetaBox($id, $title, $callback, $screen = null, $context = 'advanced', $priority = 'default', $callback_args = null)
     {
@@ -106,7 +106,7 @@ class MetaBox
      * @param string $context box context
      * @param mixed $object gets passed to the box callback function as first parameter
      * @return int number of meta_boxes
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function doMetaBoxes($screen, $context, $object = null)
@@ -138,7 +138,7 @@ class MetaBox
      * @param string $id String for use in the 'id' attribute of tags.
      * @param string|object $screen The screen on which to show the box (post, page, link).
      * @param string $context The context within the page where the boxes should show ('normal', 'advanced').
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function removeMetaBox($id, $screen, $context)
     {
@@ -164,7 +164,7 @@ class MetaBox
      * @param $options
      * @throws Exception
      * @return boolean
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function saveMetaBoxData($content_id, $key, $value, $reference, $options = null)
     {
@@ -200,7 +200,7 @@ class MetaBox
      * @param boolean $single
      * @param array $select
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getMetaData($content_id, $key, $reference, $single = false, $select = ['meta_value'])
     {
@@ -222,7 +222,7 @@ class MetaBox
      * @param $reference
      * @param array $select
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getMeta($content_id, $key, $reference, $select = ['meta_value'])
     {
@@ -234,7 +234,7 @@ class MetaBox
      * @param $key
      * @param $reference
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function deleteMetaData($content_id, $key, $reference)
     {

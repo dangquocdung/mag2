@@ -14,7 +14,7 @@ class EmailHandler
 
     /**
      * @param $view
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function setEmailTemplate($view)
     {
@@ -28,7 +28,7 @@ class EmailHandler
      * @param array $args
      * @param bool $debug
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function send($content, $title, $to = null, $args = [], $debug = false)
     {
@@ -56,7 +56,7 @@ class EmailHandler
      *
      * @param  \Exception $exception
      * @return void
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function sendErrorException(Exception $exception)

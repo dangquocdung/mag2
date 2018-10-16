@@ -22,7 +22,7 @@ class PageCacheDecorator extends CacheAbstractDecorator implements PageInterface
      * PageCacheDecorator constructor.
      * @param PageInterface $repository
      * @param CacheInterface $cache
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(PageInterface $repository, CacheInterface $cache)
     {
@@ -32,7 +32,7 @@ class PageCacheDecorator extends CacheAbstractDecorator implements PageInterface
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDataSiteMap()
     {
@@ -42,7 +42,7 @@ class PageCacheDecorator extends CacheAbstractDecorator implements PageInterface
     /**
      * @param $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getFeaturedPages($limit)
     {
@@ -53,7 +53,7 @@ class PageCacheDecorator extends CacheAbstractDecorator implements PageInterface
      * @param $array
      * @param array $select
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function whereIn($array, $select = [])
     {
@@ -64,7 +64,7 @@ class PageCacheDecorator extends CacheAbstractDecorator implements PageInterface
      * @param $query
      * @param int $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getSearch($query, $limit = 10)
     {
@@ -74,7 +74,7 @@ class PageCacheDecorator extends CacheAbstractDecorator implements PageInterface
     /**
      * @param bool $active
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getAllPages($active = true)
     {

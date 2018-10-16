@@ -11,7 +11,7 @@ trait ViewExpressionTrait
      *
      * @param string $html
      * @return \Illuminate\Support\HtmlString|string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function convertToViewExpression($html)
     {

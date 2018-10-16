@@ -16,7 +16,7 @@ class ThemeRemoveListener
      *
      * @param ThemeRemoveEvent $event
      * @return void
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function handle(ThemeRemoveEvent $event)
     {

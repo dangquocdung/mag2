@@ -10,7 +10,7 @@ class PermalinkField extends FormField
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function getTemplate()
     {

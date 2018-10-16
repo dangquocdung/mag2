@@ -19,7 +19,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  * Class SEOServiceProvider
  * @package Botble\SEO
- * @author Sang Nguyen
+ * @author Dung Thinh
  * @since 02/12/2015 14:09 PM
  */
 class SeoHelperServiceProvider extends ServiceProvider
@@ -32,7 +32,7 @@ class SeoHelperServiceProvider extends ServiceProvider
     protected $app;
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function register()
     {
@@ -48,7 +48,7 @@ class SeoHelperServiceProvider extends ServiceProvider
 
     /**
      * Boot the service provider.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {

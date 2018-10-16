@@ -31,7 +31,7 @@ class WidgetController extends BaseController
      * @param WidgetInterface $widgetRepository
      * @param SettingStore $setting
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(WidgetInterface $widgetRepository, SettingStore $setting)
     {
@@ -41,7 +41,7 @@ class WidgetController extends BaseController
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 24/09/2016 2:10 PM
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
@@ -66,7 +66,7 @@ class WidgetController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 24/09/2016 3:14 PM
      * @throws \Throwable
      */
@@ -108,7 +108,7 @@ class WidgetController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postDelete(Request $request, BaseHttpResponse $response)
     {
@@ -160,7 +160,7 @@ class WidgetController extends BaseController
     /**
      * @return null|string
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function getCurrentLocaleCode()
     {

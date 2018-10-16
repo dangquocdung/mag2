@@ -8,7 +8,7 @@ use Botble\Support\Repositories\Eloquent\RepositoriesAbstract;
 /**
  * Class MediaSettingRepository
  * @package Botble\Media
- * @author Sang Nguyen
+ * @author Dung Thinh
  */
 class MediaSettingRepository extends RepositoriesAbstract implements MediaSettingInterface
 {

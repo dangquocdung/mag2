@@ -13,7 +13,7 @@ class MenuNodeRepository extends RepositoriesAbstract implements MenuNodeInterfa
      * @param $parent_id
      * @param array $selects
      * @return array|\Illuminate\Database\Eloquent\Collection|static[]
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getByMenuId($menu_id, $parent_id, $select = ['*'])
     {

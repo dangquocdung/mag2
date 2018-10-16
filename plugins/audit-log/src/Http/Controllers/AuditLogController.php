@@ -30,7 +30,7 @@ class AuditLogController extends BaseController
     /**
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function getWidgetActivities(BaseHttpResponse $response)
@@ -48,7 +48,7 @@ class AuditLogController extends BaseController
     /**
      * @param AuditLogTable $dataTable
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function getList(AuditLogTable $dataTable)
@@ -63,7 +63,7 @@ class AuditLogController extends BaseController
      * @param int $id
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDelete(Request $request, $id, BaseHttpResponse $response)
     {
@@ -85,7 +85,7 @@ class AuditLogController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postDeleteMany(Request $request, BaseHttpResponse $response)
     {

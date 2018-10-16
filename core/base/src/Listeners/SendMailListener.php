@@ -19,7 +19,7 @@ class SendMailListener
     /**
      * SendMailListener constructor.
      * @param Mailer $mailer
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(Mailer $mailer)
     {
@@ -31,7 +31,7 @@ class SendMailListener
      *
      * @param SendMailEvent $event
      * @return void
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws Exception
      */
     public function handle(SendMailEvent $event)

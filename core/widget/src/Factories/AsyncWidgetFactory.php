@@ -11,7 +11,7 @@ class AsyncWidgetFactory extends AbstractWidgetFactory
      * Run widget without magic method.
      *
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function run()
     {

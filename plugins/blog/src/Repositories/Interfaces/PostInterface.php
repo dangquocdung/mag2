@@ -9,7 +9,7 @@ interface PostInterface extends RepositoryInterface
     /**
      * @param int $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getFeatured($limit = 5);
 
@@ -17,7 +17,7 @@ interface PostInterface extends RepositoryInterface
      * @param array $selected
      * @param int $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getListPostNonInList(array $selected = [], $limit = 7);
 
@@ -26,7 +26,7 @@ interface PostInterface extends RepositoryInterface
      * @param int $paginate
      * @param int $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getByCategory($category_id, $paginate = 12, $limit = 0);
 
@@ -34,13 +34,13 @@ interface PostInterface extends RepositoryInterface
      * @param int $user_id
      * @param int $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getByUserId($user_id, $limit = 6);
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDataSiteMap();
 
@@ -48,7 +48,7 @@ interface PostInterface extends RepositoryInterface
      * @param int $tag
      * @param int $paginate
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getByTag($tag, $paginate = 12);
 
@@ -56,7 +56,7 @@ interface PostInterface extends RepositoryInterface
      * @param int $id
      * @param int $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getRelated($id, $limit = 3);
 
@@ -64,7 +64,7 @@ interface PostInterface extends RepositoryInterface
      * @param int $limit
      * @param int $category_id
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getRecentPosts($limit = 5, $category_id = 0);
 
@@ -73,14 +73,14 @@ interface PostInterface extends RepositoryInterface
      * @param int $limit
      * @param int $paginate
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getSearch($query, $limit = 10, $paginate = 10);
 
     /**
      * @param bool $active
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getAllPosts($active = true);
 
@@ -88,7 +88,7 @@ interface PostInterface extends RepositoryInterface
      * @param int $limit
      * @param array $args
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getPopularPosts($limit, array $args = []);
 

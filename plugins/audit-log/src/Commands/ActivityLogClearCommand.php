@@ -28,7 +28,7 @@ class ActivityLogClearCommand extends Command
 
     /**
      * RebuildPermissions constructor.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @param AuditLogInterface $auditLogRepository
      */
     public function __construct(AuditLogInterface $auditLogRepository)
@@ -39,7 +39,7 @@ class ActivityLogClearCommand extends Command
 
     /**
      * Execute the console command.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function handle()

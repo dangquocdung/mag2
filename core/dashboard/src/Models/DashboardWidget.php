@@ -33,7 +33,7 @@ class DashboardWidget extends Eloquent
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\hasMany
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function settings()
     {
@@ -41,7 +41,7 @@ class DashboardWidget extends Eloquent
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected static function boot()
     {

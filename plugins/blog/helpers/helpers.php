@@ -10,7 +10,7 @@ if (!function_exists('get_featured_posts')) {
     /**
      * @param $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_featured_posts($limit)
     {
@@ -23,7 +23,7 @@ if (!function_exists('get_latest_posts')) {
      * @param $limit
      * @param array $excepts
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_latest_posts($limit, $excepts = [])
     {
@@ -37,7 +37,7 @@ if (!function_exists('get_related_posts')) {
      * @param $current_slug
      * @param $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_related_posts($current_slug, $limit)
     {
@@ -51,7 +51,7 @@ if (!function_exists('get_posts_by_category')) {
      * @param $paginate
      * @param $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_posts_by_category($category_id, $paginate = 12, $limit = 0)
     {
@@ -64,7 +64,7 @@ if (!function_exists('get_posts_by_tag')) {
      * @param $slug
      * @param $paginate
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_posts_by_tag($slug, $paginate = 12)
     {
@@ -77,7 +77,7 @@ if (!function_exists('get_posts_by_user')) {
      * @param $user_id
      * @param $paginate
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_posts_by_user($user_id, $paginate = 12)
     {
@@ -89,7 +89,7 @@ if (!function_exists('get_all_posts')) {
     /**
      * @param boolean $active
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_all_posts($active = true)
     {
@@ -101,7 +101,7 @@ if (!function_exists('get_recent_posts')) {
     /**
      * @param $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_recent_posts($limit)
     {
@@ -114,7 +114,7 @@ if (!function_exists('get_featured_categories')) {
     /**
      * @param $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_featured_categories($limit)
     {
@@ -126,7 +126,7 @@ if (!function_exists('get_all_categories')) {
     /**
      * @param array $condition
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_all_categories(array $condition = [])
     {
@@ -138,7 +138,7 @@ if (!function_exists('get_all_tags')) {
     /**
      * @param boolean $active
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_all_tags($active = true)
     {
@@ -150,7 +150,7 @@ if (!function_exists('get_popular_tags')) {
     /**
      * @param integer $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_popular_tags($limit = 10)
     {
@@ -163,7 +163,7 @@ if (!function_exists('get_popular_posts')) {
      * @param integer $limit
      * @param array $args
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_popular_posts($limit = 10, array $args = [])
     {
@@ -175,7 +175,7 @@ if (!function_exists('get_category_by_id')) {
     /**
      * @param integer $id
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_category_by_id($id)
     {
@@ -230,7 +230,7 @@ if (!function_exists('register_post_format')) {
     /**
      * @param array $formats
      * @return void
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function register_post_format(array $formats)
     {
@@ -242,7 +242,7 @@ if (!function_exists('get_post_formats')) {
     /**
      * @param bool $convert_to_list
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_post_formats($convert_to_list = false)
     {

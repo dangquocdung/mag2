@@ -66,7 +66,7 @@ class UserController extends BaseController
      * Display all users
      * @param UserTable $dataTable
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function getList(UserTable $dataTable)
@@ -83,7 +83,7 @@ class UserController extends BaseController
     /**
      * @param FormBuilder $formBuilder
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getCreate(FormBuilder $formBuilder)
     {
@@ -96,7 +96,7 @@ class UserController extends BaseController
      * @param CreateUserRequest $request
      * @param CreateUserService $service
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postCreate(CreateUserRequest $request, CreateUserService $service, BaseHttpResponse $response)
     {
@@ -115,7 +115,7 @@ class UserController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDelete($id, Request $request, BaseHttpResponse $response)
     {
@@ -141,7 +141,7 @@ class UserController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postDeleteMany(Request $request, BaseHttpResponse $response)
     {
@@ -175,7 +175,7 @@ class UserController extends BaseController
     /**
      * @param int $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View| \Illuminate\Http\RedirectResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getUserProfile($id, FormBuilder $formBuilder)
     {
@@ -217,7 +217,7 @@ class UserController extends BaseController
      * @param UpdateProfileRequest $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postUpdateProfile($id, UpdateProfileRequest $request, BaseHttpResponse $response)
     {
@@ -271,7 +271,7 @@ class UserController extends BaseController
      * @param ChangePasswordService $service
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postChangePassword(
         $id,
@@ -296,7 +296,7 @@ class UserController extends BaseController
      * @param UpdateProfileImageService $service
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postModifyProfileImage(
         ChangeProfileImageRequest $request,
@@ -329,7 +329,7 @@ class UserController extends BaseController
     /**
      * @param string $lang
      * @return \Illuminate\Http\RedirectResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws Exception
      */
     public function getLanguage($lang)
@@ -349,7 +349,7 @@ class UserController extends BaseController
     /**
      * @param string $theme
      * @return \Illuminate\Http\RedirectResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getTheme($theme)
     {
@@ -369,7 +369,7 @@ class UserController extends BaseController
     /**
      * @param int $id
      * @return \Illuminate\Http\RedirectResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getImpersonate($id)
     {
@@ -380,7 +380,7 @@ class UserController extends BaseController
 
     /**
      * @return \Illuminate\Http\RedirectResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function leaveImpersonation()
     {

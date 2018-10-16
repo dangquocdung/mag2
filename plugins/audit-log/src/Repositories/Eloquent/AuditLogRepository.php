@@ -8,7 +8,7 @@ use Botble\Support\Repositories\Eloquent\RepositoriesAbstract;
 /**
  * Class AuditLogRepository
  * @package Botble\AuditLog\Repositories
- * @author Sang Nguyen
+ * @author Dung Thinh
  * @since 16/09/2016 10:55 AM
  */
 class AuditLogRepository extends RepositoriesAbstract implements AuditLogInterface

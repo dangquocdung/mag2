@@ -22,7 +22,7 @@ class LanguageCacheDecorator extends CacheAbstractDecorator implements LanguageI
      * LanguageCacheDecorator constructor.
      * @param LanguageInterface $repository
      * @param CacheInterface $cache
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(LanguageInterface $repository, CacheInterface $cache)
     {
@@ -33,7 +33,7 @@ class LanguageCacheDecorator extends CacheAbstractDecorator implements LanguageI
     /**
      * @param array $select
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function getActiveLanguage($select = ['*'])
@@ -44,7 +44,7 @@ class LanguageCacheDecorator extends CacheAbstractDecorator implements LanguageI
     /**
      * @param array $select
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.2
      */
     public function getDefaultLanguage($select = ['*'])

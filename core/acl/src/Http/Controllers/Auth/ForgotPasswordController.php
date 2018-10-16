@@ -40,7 +40,7 @@ class ForgotPasswordController extends BaseController
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function showLinkRequestForm()
     {
@@ -69,7 +69,7 @@ class ForgotPasswordController extends BaseController
      * @param Request $request
      * @param  string $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function sendResetLinkResponse(Request $request, $response)
     {

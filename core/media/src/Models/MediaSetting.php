@@ -38,7 +38,7 @@ class MediaSetting extends Eloquent
 
     /**
      * @param $value
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function setValueAttribute($value)
     {

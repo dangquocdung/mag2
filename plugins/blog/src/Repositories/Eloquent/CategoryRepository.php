@@ -17,7 +17,7 @@ class CategoryRepository extends RepositoriesAbstract implements CategoryInterfa
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDataSiteMap()
     {
@@ -30,7 +30,7 @@ class CategoryRepository extends RepositoriesAbstract implements CategoryInterfa
 
     /**
      * @param int $limit
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @return $this
      */
     public function getFeaturedCategories($limit)
@@ -47,7 +47,7 @@ class CategoryRepository extends RepositoriesAbstract implements CategoryInterfa
     /**
      * @param array $condition
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getAllCategories(array $condition = [])
     {
@@ -115,7 +115,7 @@ class CategoryRepository extends RepositoriesAbstract implements CategoryInterfa
     /**
      * @param array $condition
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getAllCategoriesWithChildren(array $condition = [], array $with = [], array $select = ['*'])
     {

@@ -35,7 +35,7 @@ class SettingServiceProvider extends ServiceProvider
     protected $defer = true;
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function register()
     {
@@ -63,7 +63,7 @@ class SettingServiceProvider extends ServiceProvider
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {

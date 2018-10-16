@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 /**
  * Class MediaFileRepository
  * @package Botble\Media
- * @author Sang Nguyen
+ * @author Dung Thinh
  * @since 19/08/2015 07:45 AM
  */
 class MediaFileRepository extends RepositoriesAbstract implements MediaFileInterface
@@ -20,7 +20,7 @@ class MediaFileRepository extends RepositoriesAbstract implements MediaFileInter
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getSpaceUsed()
     {
@@ -34,7 +34,7 @@ class MediaFileRepository extends RepositoriesAbstract implements MediaFileInter
 
     /**
      * @return int
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getSpaceLeft()
     {
@@ -43,7 +43,7 @@ class MediaFileRepository extends RepositoriesAbstract implements MediaFileInter
 
     /**
      * @return int
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getQuota()
     {
@@ -52,7 +52,7 @@ class MediaFileRepository extends RepositoriesAbstract implements MediaFileInter
 
     /**
      * @return float
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getPercentageUsed()
     {
@@ -67,7 +67,7 @@ class MediaFileRepository extends RepositoriesAbstract implements MediaFileInter
      * @param $name
      * @param $folder
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function createName($name, $folder)
     {
@@ -83,7 +83,7 @@ class MediaFileRepository extends RepositoriesAbstract implements MediaFileInter
      * @param $name
      * @param $folder
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function checkIfExistsName($name, $folder)
     {
@@ -102,7 +102,7 @@ class MediaFileRepository extends RepositoriesAbstract implements MediaFileInter
      * @param $extension
      * @param $folder_path
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function createSlug($name, $extension, $folder_path)
     {
@@ -381,7 +381,7 @@ class MediaFileRepository extends RepositoriesAbstract implements MediaFileInter
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function emptyTrash()
     {

@@ -6,7 +6,7 @@ if (!function_exists('get_all_simple_sliders')) {
     /**
      * @param array $condition
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_all_simple_sliders(array $condition = [])
     {

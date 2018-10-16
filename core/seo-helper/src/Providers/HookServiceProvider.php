@@ -15,7 +15,7 @@ class HookServiceProvider extends ServiceProvider
 
     /**
      * Boot the service provider.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {
@@ -25,7 +25,7 @@ class HookServiceProvider extends ServiceProvider
 
     /**
      * @param $screen
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addMetaBox($screen)
     {
@@ -37,7 +37,7 @@ class HookServiceProvider extends ServiceProvider
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function seoMetaBox()
     {
@@ -63,7 +63,7 @@ class HookServiceProvider extends ServiceProvider
     /**
      * @param $screen
      * @param $object
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function setSeoMeta($screen, $object)
     {

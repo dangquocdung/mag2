@@ -15,7 +15,7 @@ class FacebookController extends BaseController
     /**
      * @param SettingStore $settingStore
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getSettings(SettingStore $settingStore)
     {
@@ -38,7 +38,7 @@ class FacebookController extends BaseController
      * @param BaseHttpResponse $response
      * @param SettingStore $settingStore
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postSettings(
         UpdateSettingsRequest $request,
@@ -66,7 +66,7 @@ class FacebookController extends BaseController
     /**
      * @param LaravelFacebookSdk $facebook
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getAccessToken(LaravelFacebookSdk $facebook, BaseHttpResponse $response)
     {
@@ -83,7 +83,7 @@ class FacebookController extends BaseController
      * @param BaseHttpResponse $response
      * @param SettingStore $settingStore
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getHandleCallback(
         LaravelFacebookSdk $facebook,
@@ -169,7 +169,7 @@ class FacebookController extends BaseController
      * @param BaseHttpResponse $response
      * @param SettingStore $settingStore
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getRemoveAccessToken(BaseHttpResponse $response, SettingStore $settingStore)
     {

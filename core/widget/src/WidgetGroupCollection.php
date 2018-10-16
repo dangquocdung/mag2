@@ -22,7 +22,7 @@ class WidgetGroupCollection
      * Constructor.
      *
      * @param ApplicationWrapperContract $app
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(ApplicationWrapperContract $app)
     {
@@ -35,7 +35,7 @@ class WidgetGroupCollection
      * @param $sidebar_id
      *
      * @return \Botble\Widget\WidgetGroup
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function group($sidebar_id)
     {
@@ -49,7 +49,7 @@ class WidgetGroupCollection
     /**
      * @param $args
      * @return $this|mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function setGroup($args)
     {
@@ -67,7 +67,7 @@ class WidgetGroupCollection
     /**
      * @param $group_id
      * @return $this
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function removeGroup($group_id)
     {
@@ -79,7 +79,7 @@ class WidgetGroupCollection
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getGroups()
     {

@@ -36,7 +36,7 @@ class PluginRemoveCommand extends Command
      * Create a new key generator command.
      *
      * @param \Illuminate\Filesystem\Filesystem $files
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(Filesystem $files)
     {
@@ -47,7 +47,7 @@ class PluginRemoveCommand extends Command
 
     /**
      * Execute the console command.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      * @throws \Exception
      */

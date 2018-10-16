@@ -31,7 +31,7 @@ class UserCreateCommand extends Command
     /**
      * Install constructor.
      * @param UserInterface $userRepository
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(UserInterface $userRepository)
     {
@@ -43,7 +43,7 @@ class UserCreateCommand extends Command
     /**
      * Execute the console command.
      *
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function handle()
     {
@@ -54,7 +54,7 @@ class UserCreateCommand extends Command
      * Create a superuser.
      *
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function createSuperUser()
     {
@@ -86,7 +86,7 @@ class UserCreateCommand extends Command
     /**
      * @param $message
      * @param string $rules
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function askWithValidate($message, string $rules)
     {
@@ -105,7 +105,7 @@ class UserCreateCommand extends Command
      * @param array $data
      * @param array $rules
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function validate(array $data, array $rules)
     {

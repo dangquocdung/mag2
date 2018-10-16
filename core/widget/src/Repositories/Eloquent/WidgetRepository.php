@@ -16,7 +16,7 @@ class WidgetRepository extends RepositoriesAbstract implements WidgetInterface
      * Get all theme widgets
      * @param string $theme
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getByTheme($theme)
     {

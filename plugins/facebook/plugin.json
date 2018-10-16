@@ -2,7 +2,7 @@
     "name": "Facebook",
     "namespace": "Botble\\Facebook\\",
     "provider": "Botble\\Facebook\\Providers\\FacebookServiceProvider",
-    "author": "Sang Nguyen",
+    "author": "Dung Thinh",
     "url": "http://sangnguyen.info",
     "version": "2.7",
     "description": "Facebook"

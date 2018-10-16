@@ -41,7 +41,7 @@ class SettingController extends BaseController
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getOptions()
     {
@@ -57,7 +57,7 @@ class SettingController extends BaseController
      * @param BaseHttpResponse $response
      * @param SettingStore $setting
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postEdit(Request $request, BaseHttpResponse $response, SettingStore $setting)
     {
@@ -88,7 +88,7 @@ class SettingController extends BaseController
      * @param BaseHttpResponse $response
      * @param SettingStore $setting
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postEditEmailConfig(Request $request, BaseHttpResponse $response, SettingStore $setting)
     {
@@ -162,7 +162,7 @@ class SettingController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postResetToDefault(Request $request, BaseHttpResponse $response)
     {
@@ -191,7 +191,7 @@ class SettingController extends BaseController
      * @param EmailHandler $emailHandler
      * @return BaseHttpResponse
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postSendTestEmail(BaseHttpResponse $response, SendTestEmailRequest $request, SettingStore $settingStore, EmailHandler $emailHandler)
     {
@@ -206,7 +206,7 @@ class SettingController extends BaseController
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getMediaSetting()
     {
@@ -219,7 +219,7 @@ class SettingController extends BaseController
      * @param BaseHttpResponse $response
      * @param SettingStore $setting
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postEditMediaSetting(MediaSettingRequest $request, BaseHttpResponse $response, SettingStore $setting)
     {

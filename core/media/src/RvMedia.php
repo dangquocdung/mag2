@@ -44,7 +44,7 @@ class RvMedia
      * @param MediaFolderInterface $folderRepository
      * @param UploadsManager $uploadManager
      * @param ThumbnailService $thumbnailService
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(
         MediaFileInterface $fileRepository,
@@ -63,7 +63,7 @@ class RvMedia
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function renderHeader()
@@ -74,7 +74,7 @@ class RvMedia
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function renderFooter()
@@ -84,7 +84,7 @@ class RvMedia
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function renderContent()
@@ -96,7 +96,7 @@ class RvMedia
      * Get all urls
      *
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getUrls()
     {
@@ -120,7 +120,7 @@ class RvMedia
      * @param $data
      * @param null $message
      * @return \Illuminate\Http\JsonResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function responseSuccess($data, $message = null)
     {
@@ -137,7 +137,7 @@ class RvMedia
      * @param null $code
      * @param int $status
      * @return \Illuminate\Http\JsonResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function responseError($message, $data = [], $code = null, $status = 200)
     {
@@ -168,7 +168,7 @@ class RvMedia
      * @param int $folder_id
      * @param $fileUpload
      * @return \Illuminate\Http\JsonResponse|array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function handleUpload($fileUpload, $folder_id = 0, $path = '')
@@ -244,7 +244,7 @@ class RvMedia
 
     /**
      * @param array $permissions
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function setPermissions(array $permissions)
     {
@@ -253,7 +253,7 @@ class RvMedia
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getPermissions()
     {
@@ -262,7 +262,7 @@ class RvMedia
 
     /**
      * @param $permission
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function removePermission($permission)
     {
@@ -271,7 +271,7 @@ class RvMedia
 
     /**
      * @param $permission
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addPermission($permission)
     {
@@ -281,7 +281,7 @@ class RvMedia
     /**
      * @param $permission
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function hasPermission($permission)
     {
@@ -291,7 +291,7 @@ class RvMedia
     /**
      * @param array $permissions
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function hasAnyPermission(array $permissions)
     {
@@ -308,7 +308,7 @@ class RvMedia
     /**
      * Returns a file size limit in bytes based on the PHP upload_max_filesize and post_max_size
      * @return float|int
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getServerConfigMaxUploadFileSize()
     {
@@ -328,7 +328,7 @@ class RvMedia
     /**
      * @param $size
      * @return float - bytes
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function parseSize($size)
     {

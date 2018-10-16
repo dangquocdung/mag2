@@ -64,7 +64,7 @@ abstract class FormAbstract extends Form
 
     /**
      * FormAbstract constructor.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function __construct()
@@ -77,7 +77,7 @@ abstract class FormAbstract extends Form
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getOptions(): array
     {
@@ -87,7 +87,7 @@ abstract class FormAbstract extends Form
     /**
      * @param array $options
      * @return $this
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function setOptions(array $options): self
     {
@@ -297,7 +297,7 @@ abstract class FormAbstract extends Form
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @return $this
      */
     public function withCustomFields(): self
@@ -341,7 +341,7 @@ abstract class FormAbstract extends Form
 
     /**
      * @return int
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function hasMainFields()
     {
@@ -380,7 +380,7 @@ abstract class FormAbstract extends Form
      * @param bool $showFields
      * @param bool $showEnd
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function renderForm(array $options = [], $showStart = true, $showFields = true, $showEnd = true): string
     {
@@ -395,7 +395,7 @@ abstract class FormAbstract extends Form
     /**
      * @return string
      * @throws \Exception
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function renderValidatorJs(): string
     {

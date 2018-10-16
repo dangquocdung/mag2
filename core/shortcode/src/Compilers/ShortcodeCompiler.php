@@ -374,7 +374,7 @@ class ShortcodeCompiler
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getRegistered()
     {

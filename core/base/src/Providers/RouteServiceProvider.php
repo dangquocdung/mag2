@@ -16,7 +16,7 @@ class RouteServiceProvider extends ServiceProvider
 
     /**
      * Move base routes to a service provider to make sure all filters & actions can hook to base routes
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {

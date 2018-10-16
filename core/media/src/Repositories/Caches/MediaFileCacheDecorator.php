@@ -23,7 +23,7 @@ class MediaFileCacheDecorator extends CacheAbstractDecorator implements MediaFil
      * FileCacheDecorator constructor.
      * @param MediaFileInterface $repository
      * @param CacheInterface $cache
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(MediaFileInterface $repository, CacheInterface $cache)
     {
@@ -33,7 +33,7 @@ class MediaFileCacheDecorator extends CacheAbstractDecorator implements MediaFil
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getSpaceUsed()
     {
@@ -42,7 +42,7 @@ class MediaFileCacheDecorator extends CacheAbstractDecorator implements MediaFil
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getSpaceLeft()
     {
@@ -51,7 +51,7 @@ class MediaFileCacheDecorator extends CacheAbstractDecorator implements MediaFil
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getQuota()
     {
@@ -60,7 +60,7 @@ class MediaFileCacheDecorator extends CacheAbstractDecorator implements MediaFil
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getPercentageUsed()
     {
@@ -71,7 +71,7 @@ class MediaFileCacheDecorator extends CacheAbstractDecorator implements MediaFil
      * @param $name
      * @param $folder
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function createName($name, $folder)
     {
@@ -83,7 +83,7 @@ class MediaFileCacheDecorator extends CacheAbstractDecorator implements MediaFil
      * @param $extension
      * @param $folder
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function createSlug($name, $extension, $folder)
     {
@@ -104,7 +104,7 @@ class MediaFileCacheDecorator extends CacheAbstractDecorator implements MediaFil
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function emptyTrash()
     {

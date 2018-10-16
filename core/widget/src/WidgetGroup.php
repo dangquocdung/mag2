@@ -65,7 +65,7 @@ class WidgetGroup
     /**
      * @param $args
      * @param ApplicationWrapperContract $app
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(array $args, ApplicationWrapperContract $app)
     {
@@ -80,7 +80,7 @@ class WidgetGroup
      * Display all widgets from this group in correct order.
      *
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function display()
     {
@@ -106,7 +106,7 @@ class WidgetGroup
      *
      * @param $widget
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function displayWidget($widget, $position)
     {
@@ -124,7 +124,7 @@ class WidgetGroup
      * @param int $position
      *
      * @return $this
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function position($position)
     {
@@ -135,7 +135,7 @@ class WidgetGroup
 
     /**
      * Add a widget to the group.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addWidget()
     {
@@ -147,7 +147,7 @@ class WidgetGroup
      *
      * @param string $type
      * @param array $arguments
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function addWidgetWithType($type, array $arguments = [])
     {
@@ -168,7 +168,7 @@ class WidgetGroup
     /**
      * Reset the position property back to the default.
      * So it does not affect the next widget.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function resetPosition()
     {
@@ -177,7 +177,7 @@ class WidgetGroup
 
     /**
      * Add an async widget to the group.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addAsyncWidget()
     {
@@ -188,7 +188,7 @@ class WidgetGroup
      * Getter for position.
      *
      * @return integer
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getPosition()
     {
@@ -201,7 +201,7 @@ class WidgetGroup
      * @param string $separator
      *
      * @return $this
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function setSeparator($separator)
     {
@@ -214,7 +214,7 @@ class WidgetGroup
      * Check if there are any widgets in the group.
      *
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function any()
     {
@@ -225,7 +225,7 @@ class WidgetGroup
      * Check if there are no widgets in the group.
      *
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function isEmpty()
     {
@@ -236,7 +236,7 @@ class WidgetGroup
      * Count the number of widgets in this group.
      *
      * @return int
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function count()
     {
@@ -250,7 +250,7 @@ class WidgetGroup
 
     /**
      * @return mixed|string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getId()
     {
@@ -259,7 +259,7 @@ class WidgetGroup
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getName()
     {
@@ -276,7 +276,7 @@ class WidgetGroup
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDescription()
     {
@@ -290,7 +290,7 @@ class WidgetGroup
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getWidgets()
     {

@@ -10,7 +10,7 @@ class DashboardWidgetSettingRepository extends RepositoriesAbstract implements D
 {
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function getListWidget()

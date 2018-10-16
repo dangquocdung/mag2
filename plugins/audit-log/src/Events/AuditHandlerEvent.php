@@ -47,7 +47,7 @@ class AuditHandlerEvent extends \Event
      * @param null $reference_name
      * @param string $type
      * @param int $reference_user
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct($module, $action, $reference_id = 0, $reference_name, $type, $reference_user = 0)
     {
@@ -66,7 +66,7 @@ class AuditHandlerEvent extends \Event
      * Get the channels the event should be broadcast on.
      *
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function broadcastOn()
     {

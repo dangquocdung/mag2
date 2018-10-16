@@ -64,7 +64,7 @@ class RoleForm extends FormAbstract
      * @param int $parentId
      * @param array $allFlags
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function getChildren($parentId, $allFlags)
     {
@@ -79,7 +79,7 @@ class RoleForm extends FormAbstract
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function getAvailablePermissions(): array
     {
@@ -116,7 +116,7 @@ class RoleForm extends FormAbstract
     /**
      * @param array $flags
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function getPermissionTree($flags): array
     {

@@ -9,13 +9,13 @@ interface PageInterface extends RepositoryInterface
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDataSiteMap();
 
     /**
      * @param $limit
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getFeaturedPages($limit);
 
@@ -23,7 +23,7 @@ interface PageInterface extends RepositoryInterface
      * @param $array
      * @param array $select
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function whereIn($array, $select = []);
 
@@ -31,14 +31,14 @@ interface PageInterface extends RepositoryInterface
      * @param $query
      * @param int $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getSearch($query, $limit = 10);
 
     /**
      * @param bool $active
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getAllPages($active = true);
 }

@@ -22,7 +22,7 @@ class SimpleSliderItemCacheDecorator extends CacheAbstractDecorator implements S
      * SimpleSliderCacheDecorator constructor.
      * @param SimpleSliderItemInterface $repository
      * @param CacheInterface $cache
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(SimpleSliderItemInterface $repository, CacheInterface $cache)
     {

@@ -45,7 +45,7 @@ class MediaFile extends Eloquent
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function folder()
     {
@@ -54,7 +54,7 @@ class MediaFile extends Eloquent
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getTypeAttribute()
     {
@@ -75,7 +75,7 @@ class MediaFile extends Eloquent
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getHumanSizeAttribute()
     {
@@ -84,7 +84,7 @@ class MediaFile extends Eloquent
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getIconAttribute()
     {
@@ -117,7 +117,7 @@ class MediaFile extends Eloquent
     /**
      * @param $value
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getOptionsAttribute($value)
     {
@@ -125,7 +125,7 @@ class MediaFile extends Eloquent
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @param $value
      */
     public function setOptionsAttribute($value)
@@ -134,7 +134,7 @@ class MediaFile extends Eloquent
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected static function boot()
     {

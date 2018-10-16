@@ -10,7 +10,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  * Class AssetsServiceProvider
  * @package Botble\Assets
- * @author Sang Nguyen
+ * @author Dung Thinh
  * @since 22/07/2015 11:23 PM
  */
 class AssetsServiceProvider extends ServiceProvider
@@ -23,7 +23,7 @@ class AssetsServiceProvider extends ServiceProvider
     protected $app;
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function register()
     {
@@ -31,7 +31,7 @@ class AssetsServiceProvider extends ServiceProvider
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {

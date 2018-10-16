@@ -15,7 +15,7 @@ use RvMedia;
 /**
  * Class FileController
  * @package Botble\Media\Http\Controllers
- * @author Sang Nguyen
+ * @author Dung Thinh
  * @since 19/08/2015 07:50 AM
  */
 class MediaFileController extends Controller
@@ -39,7 +39,7 @@ class MediaFileController extends Controller
      * @param MediaFileInterface $fileRepository
      * @param MediaFolderInterface $folderRepository
      * @param UploadsManager $uploadManager
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(
         MediaFileInterface $fileRepository,
@@ -55,7 +55,7 @@ class MediaFileController extends Controller
     /**
      * @param Request $request
      * @return JsonResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postAddExternalService(Request $request)
     {
@@ -80,7 +80,7 @@ class MediaFileController extends Controller
     /**
      * @param MediaFileRequest $request
      * @return JsonResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function postUpload(MediaFileRequest $request)
@@ -100,7 +100,7 @@ class MediaFileController extends Controller
     /**
      * @param MediaFileRequest $request
      * @return JsonResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function postUploadFromEditor(MediaFileRequest $request)

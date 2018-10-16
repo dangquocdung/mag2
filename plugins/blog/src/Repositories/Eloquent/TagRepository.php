@@ -15,7 +15,7 @@ class TagRepository extends RepositoriesAbstract implements TagInterface
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDataSiteMap()
     {
@@ -28,7 +28,7 @@ class TagRepository extends RepositoriesAbstract implements TagInterface
     /**
      * @param int $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getPopularTags($limit)
     {
@@ -41,7 +41,7 @@ class TagRepository extends RepositoriesAbstract implements TagInterface
     /**
      * @param bool $active
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getAllTags($active = true)
     {

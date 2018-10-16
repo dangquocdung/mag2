@@ -51,7 +51,7 @@ class DashboardController extends BaseController
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDashboard()
     {
@@ -97,7 +97,7 @@ class DashboardController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postEditWidgetSettingItem(Request $request, BaseHttpResponse $response)
     {
@@ -126,7 +126,7 @@ class DashboardController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postUpdateWidgetOrder(Request $request, BaseHttpResponse $response)
     {
@@ -148,7 +148,7 @@ class DashboardController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getHideWidget(Request $request, BaseHttpResponse $response)
     {
@@ -171,7 +171,7 @@ class DashboardController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postHideWidgets(Request $request, BaseHttpResponse $response)
     {

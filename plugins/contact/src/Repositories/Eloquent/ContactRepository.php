@@ -10,7 +10,7 @@ class ContactRepository extends RepositoriesAbstract implements ContactInterface
     /**
      * @param array $select
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getUnread($select = ['*'])
     {
@@ -21,7 +21,7 @@ class ContactRepository extends RepositoriesAbstract implements ContactInterface
 
     /**
      * @return int
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function countUnread()
     {

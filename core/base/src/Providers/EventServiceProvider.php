@@ -22,7 +22,7 @@ class EventServiceProvider extends ServiceProvider
      * The event listener mappings for the application.
      *
      * @var array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected $listen = [
         SendMailEvent::class => [
@@ -44,7 +44,7 @@ class EventServiceProvider extends ServiceProvider
 
     /** Boot the service provider.
      * @return void
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {

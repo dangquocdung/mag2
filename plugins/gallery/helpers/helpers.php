@@ -9,7 +9,7 @@ if (!function_exists('gallery_meta_data')) {
      * @param $type
      * @param array $select
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function gallery_meta_data($id, $type, array $select = ['images'])
     {
@@ -25,7 +25,7 @@ if (!function_exists('get_galleries')) {
     /**
      * @param $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_galleries($limit)
     {
@@ -37,7 +37,7 @@ if (!function_exists('render_galleries')) {
     /**
      * @param $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function render_galleries($limit)
     {
@@ -50,7 +50,7 @@ if (!function_exists('get_list_galleries')) {
     /**
      * @param array $condition
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_list_galleries(array $condition)
     {
@@ -63,7 +63,7 @@ if (!function_exists('render_object_gallery')) {
      * @param array $galleries
      * @param string $category
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws Throwable
      */
     function render_object_gallery(array $galleries, $category = null): string

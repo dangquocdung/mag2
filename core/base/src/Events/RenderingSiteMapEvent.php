@@ -12,7 +12,7 @@ class RenderingSiteMapEvent extends Event
      * Get the channels the event should be broadcast on.
      *
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function broadcastOn()
     {

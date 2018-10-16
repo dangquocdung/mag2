@@ -22,7 +22,7 @@ class {Plugin}CacheDecorator extends CacheAbstractDecorator implements {Plugin}I
      * {Plugin}CacheDecorator constructor.
      * @param {Plugin}Interface $repository
      * @param CacheInterface $cache
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct({Plugin}Interface $repository, CacheInterface $cache)
     {

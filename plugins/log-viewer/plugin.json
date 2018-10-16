@@ -2,7 +2,7 @@
     "name": "Log Viewer",
     "namespace": "Botble\\LogViewer\\",
     "provider": "Botble\\LogViewer\\Providers\\LogViewerServiceProvider",
-    "author": "Sang Nguyen",
+    "author": "Dung Thinh",
     "url": "http://sangnguyen.info",
     "version": "2.6",
     "description": "Log Viewer"

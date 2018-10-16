@@ -10,7 +10,7 @@ use Illuminate\Database\Query\Builder;
 /**
  * Class MediaFolderRepository
  * @package Botble\Media
- * @author Sang Nguyen
+ * @author Dung Thinh
  * @since 19/08/2015 07:45 AM
  */
 class MediaFolderRepository extends RepositoriesAbstract implements MediaFolderInterface
@@ -46,7 +46,7 @@ class MediaFolderRepository extends RepositoriesAbstract implements MediaFolderI
      * @param $name
      * @param $parent_id
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function createSlug($name, $parent_id)
     {
@@ -64,7 +64,7 @@ class MediaFolderRepository extends RepositoriesAbstract implements MediaFolderI
      * @param $name
      * @param $parent_id
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function createName($name, $parent_id)
     {
@@ -84,7 +84,7 @@ class MediaFolderRepository extends RepositoriesAbstract implements MediaFolderI
      * @param $parent_id
      * @return mixed
      * @internal param $slug
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function checkIfExists($key, $value, $parent_id)
     {
@@ -102,7 +102,7 @@ class MediaFolderRepository extends RepositoriesAbstract implements MediaFolderI
      * @param $parent_id
      * @param array $breadcrumbs
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getBreadcrumbs($parent_id, $breadcrumbs = [])
     {
@@ -129,7 +129,7 @@ class MediaFolderRepository extends RepositoriesAbstract implements MediaFolderI
      * @param $parent_id
      * @param array $params
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getTrashed($parent_id, array $params = [])
     {
@@ -166,7 +166,7 @@ class MediaFolderRepository extends RepositoriesAbstract implements MediaFolderI
     /**
      * @param $folder_id
      * @param bool $force
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function deleteFolder($folder_id, $force = false)
     {
@@ -187,7 +187,7 @@ class MediaFolderRepository extends RepositoriesAbstract implements MediaFolderI
      * @param array $child
      * @return array
      * @internal param $folder_id
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getAllChildFolders($parent_id, $child = [])
     {
@@ -211,7 +211,7 @@ class MediaFolderRepository extends RepositoriesAbstract implements MediaFolderI
      * @param $folder_id
      * @param string $path
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getFullPath($folder_id, $path = '/')
     {
@@ -238,7 +238,7 @@ class MediaFolderRepository extends RepositoriesAbstract implements MediaFolderI
 
     /**
      * @param $folder_id
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function restoreFolder($folder_id)
     {
@@ -252,7 +252,7 @@ class MediaFolderRepository extends RepositoriesAbstract implements MediaFolderI
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function emptyTrash()
     {

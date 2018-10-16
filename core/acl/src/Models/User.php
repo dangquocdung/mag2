@@ -102,7 +102,7 @@ class User extends Authenticatable implements RoleableInterface, PermissibleInte
      * Always capitalize the first name when we retrieve it
      * @param string $value
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getFirstNameAttribute($value)
     {
@@ -113,7 +113,7 @@ class User extends Authenticatable implements RoleableInterface, PermissibleInte
      * Always capitalize the last name when we retrieve it
      * @param string $value
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getLastNameAttribute($value)
     {
@@ -122,7 +122,7 @@ class User extends Authenticatable implements RoleableInterface, PermissibleInte
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getFullName()
     {
@@ -131,7 +131,7 @@ class User extends Authenticatable implements RoleableInterface, PermissibleInte
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getProfileImage()
     {
@@ -144,7 +144,7 @@ class User extends Authenticatable implements RoleableInterface, PermissibleInte
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getRole()
     {
@@ -153,7 +153,7 @@ class User extends Authenticatable implements RoleableInterface, PermissibleInte
 
     /**
      * @return boolean
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function isSuperUser()
     {
@@ -166,7 +166,7 @@ class User extends Authenticatable implements RoleableInterface, PermissibleInte
     /**
      * @param string $permission
      * @return boolean
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function hasPermission($permission)
     {
@@ -182,7 +182,7 @@ class User extends Authenticatable implements RoleableInterface, PermissibleInte
     /**
      * @param array $permissions
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function hasAnyPermission(array $permissions)
     {
@@ -210,7 +210,7 @@ class User extends Authenticatable implements RoleableInterface, PermissibleInte
 
     /**
      * @param string $date
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function setDobAttribute($date)
     {
@@ -223,7 +223,7 @@ class User extends Authenticatable implements RoleableInterface, PermissibleInte
 
     /**
      * @param $date
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @return string
      */
     public function getDobAttribute($date)

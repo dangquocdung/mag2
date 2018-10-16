@@ -12,7 +12,7 @@ class Template
     /**
      * @param $templates
      * @return void
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 16-09-2016
      */
     public static function registerPageTemplate($templates = [])
@@ -26,7 +26,7 @@ class Template
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 16-09-2016
      */
     protected static function getExistsTemplate()
@@ -40,7 +40,7 @@ class Template
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 16-09-2016
      */
     public static function getPageTemplates()

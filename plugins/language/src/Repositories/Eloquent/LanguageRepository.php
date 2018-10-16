@@ -10,7 +10,7 @@ class LanguageRepository extends RepositoriesAbstract implements LanguageInterfa
     /**
      * @param array $select
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function getActiveLanguage($select = ['*'])
@@ -23,7 +23,7 @@ class LanguageRepository extends RepositoriesAbstract implements LanguageInterfa
     /**
      * @param array $select
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.2
      */
     public function getDefaultLanguage($select = ['*'])

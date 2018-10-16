@@ -27,7 +27,7 @@ class Backup
     protected $folder;
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct()
     {
@@ -37,7 +37,7 @@ class Backup
     /**
      * @param Request $request
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function createBackupFolder(Request $request)
@@ -81,7 +81,7 @@ class Backup
     /**
      * @param string $folder
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function createFolder($folder)
     {
@@ -94,7 +94,7 @@ class Backup
 
     /**
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws Exception
      */
     public function backupDb()
@@ -120,7 +120,7 @@ class Backup
     /**
      * @param string $source
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function backupFolder($source)
@@ -156,7 +156,7 @@ class Backup
      * @param string$path
      * @param string $file
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws Exception
      */
     public function restoreDb($file, $path)
@@ -181,7 +181,7 @@ class Backup
      * @param string $fileName
      * @param string $pathTo
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function restore($fileName, $pathTo)
     {
@@ -205,7 +205,7 @@ class Backup
      * @param string $src
      * @param ZipArchive $zip
      * @param string $pathLength
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function recurseZip($src, &$zip, $pathLength)
     {
@@ -231,7 +231,7 @@ class Backup
     /**
      * @param string $path
      * @param string $name
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws Exception
      */
     public function compressFileToZip($path, $name)
@@ -254,7 +254,7 @@ class Backup
     /**
      * @param string $file
      * @throws Exception
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function deleteFile($file)
     {
@@ -265,7 +265,7 @@ class Backup
 
     /**
      * @param string $path
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function deleteFolderBackup($path)

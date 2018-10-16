@@ -46,7 +46,7 @@ class SimpleSliderItemTable extends TableAbstract
      * Display ajax response.
      *
      * @return \Illuminate\Http\JsonResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function ajax()
@@ -82,7 +82,7 @@ class SimpleSliderItemTable extends TableAbstract
      * Get the query object to be processed by table.
      *
      * @return \Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function query()
@@ -102,7 +102,7 @@ class SimpleSliderItemTable extends TableAbstract
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function columns()
@@ -136,7 +136,7 @@ class SimpleSliderItemTable extends TableAbstract
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function buttons()
@@ -146,7 +146,7 @@ class SimpleSliderItemTable extends TableAbstract
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function actions()

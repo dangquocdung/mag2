@@ -26,7 +26,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  * Class MediaServiceProvider
  * @package Botble\Media
- * @author Sang Nguyen
+ * @author Dung Thinh
  * @since 02/07/2016 09:50 AM
  */
 class MediaServiceProvider extends ServiceProvider
@@ -39,7 +39,7 @@ class MediaServiceProvider extends ServiceProvider
     protected $app;
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function register()
     {
@@ -76,7 +76,7 @@ class MediaServiceProvider extends ServiceProvider
 
     /**
      * Boot the service provider.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {

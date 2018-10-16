@@ -36,7 +36,7 @@ class AuditLogTable extends TableAbstract
      * Display ajax response.
      *
      * @return \Illuminate\Http\JsonResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function ajax()
     {
@@ -61,7 +61,7 @@ class AuditLogTable extends TableAbstract
      * Get the query object to be processed by datatables.
      *
      * @return \Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function query()
@@ -75,7 +75,7 @@ class AuditLogTable extends TableAbstract
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function columns()
     {
@@ -100,7 +100,7 @@ class AuditLogTable extends TableAbstract
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function buttons()

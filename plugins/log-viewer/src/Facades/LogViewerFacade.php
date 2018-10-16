@@ -10,7 +10,7 @@ class LogViewerFacade extends Facade
      * Get the registered name of the component.
      *
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected static function getFacadeAccessor()
     {

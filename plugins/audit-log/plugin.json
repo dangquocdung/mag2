@@ -2,7 +2,7 @@
     "name": "Audit Log",
     "namespace": "Botble\\AuditLog\\",
     "provider": "Botble\\AuditLog\\Providers\\AuditLogServiceProvider",
-    "author": "Sang Nguyen",
+    "author": "Dung Thinh",
     "url": "http://sangnguyen.info",
     "version": "2.6",
     "description": "Record activities logs"

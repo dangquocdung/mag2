@@ -9,7 +9,7 @@ use Botble\Support\Services\Cache\CacheInterface;
 /**
  * Class AuditLogCacheDecorator
  * @package Botble\AuditLog\Repositories
- * @author Sang Nguyen
+ * @author Dung Thinh
  * @since 16/09/2016 10:55 AM
  */
 class AuditLogCacheDecorator extends CacheAbstractDecorator implements AuditLogInterface
@@ -28,7 +28,7 @@ class AuditLogCacheDecorator extends CacheAbstractDecorator implements AuditLogI
      * PermissionCacheDecorator constructor.
      * @param AuditLogInterface $repository
      * @param CacheInterface $cache
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(AuditLogInterface $repository, CacheInterface $cache)
     {

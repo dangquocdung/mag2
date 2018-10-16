@@ -36,7 +36,7 @@ class DisableInDemoModeMiddleware
      * @param  \Illuminate\Http\Request $request
      * @param  \Closure $next
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function handle($request, Closure $next)

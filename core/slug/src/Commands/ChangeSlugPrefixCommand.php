@@ -24,7 +24,7 @@ class ChangeSlugPrefixCommand extends Command
 
     /**
      * Execute the console command.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function handle()
     {

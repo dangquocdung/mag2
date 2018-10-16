@@ -14,7 +14,7 @@ if (!function_exists('table_actions')) {
      * @param string $extra
      * @return string
      * @throws Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function table_actions($edit, $delete, $item, $extra = null)
     {
@@ -28,7 +28,7 @@ if (!function_exists('simple_table_actions')) {
      * @param array $actions
      * @return string
      * @throws Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function simple_table_actions(array $actions)
     {
@@ -41,7 +41,7 @@ if (!function_exists('restore_action')) {
      * @param $restore
      * @param $item
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws Throwable
      */
     function restore_action($restore, $item)
@@ -56,7 +56,7 @@ if (!function_exists('anchor_link')) {
      * @param $name
      * @param array $options
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws Throwable
      */
     function anchor_link($link, $name, array $options = [])
@@ -70,7 +70,7 @@ if (!function_exists('table_checkbox')) {
     /**
      * @param $id
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws Throwable
      */
     function table_checkbox($id)
@@ -87,7 +87,7 @@ if (!function_exists('table_status')) {
      * @internal param $status
      * @internal param null $activated_text
      * @internal param null $deactivated_text
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws Throwable
      */
     function table_status($selected, $statuses = [])
@@ -125,7 +125,7 @@ if (!function_exists('table_featured')) {
 
 /**
  * @return boolean
- * @author Sang Nguyen
+ * @author Dung Thinh
  */
 function check_database_connection()
 {
@@ -142,7 +142,7 @@ if (!function_exists('language_flag')) {
      * @return string
      * @param $flag
      * @param $name
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function language_flag($flag, $name = null)
     {
@@ -223,7 +223,7 @@ if (!function_exists('render_editor')) {
      * @param bool $with_short_code
      * @param array $attributes
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws Throwable
      */
     function render_editor($name, $value = null, $with_short_code = false, array $attributes = [])
@@ -283,7 +283,7 @@ if (!function_exists('html_attribute_element')) {
      * @param $key
      * @param $value
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function html_attribute_element($key, $value)
     {
@@ -306,7 +306,7 @@ if (!function_exists('html_attributes_builder')) {
     /**
      * @param array $attributes
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function html_attributes_builder(array $attributes)
     {
@@ -327,7 +327,7 @@ if (!function_exists('html_attributes_builder')) {
 if (!function_exists('scan_language_keys')) {
     /**
      * Scan all __() function then save key to /storage/languages.json
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @param $key
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
@@ -350,7 +350,7 @@ if (!function_exists('remove_query_string_var')) {
      * @param $url
      * @param $key
      * @return bool|mixed|string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function remove_query_string_var($url, $key)
     {
@@ -406,7 +406,7 @@ if (!function_exists('array_equal_with_key')) {
 if (!function_exists('get_active_plugins')) {
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     function get_active_plugins()
     {
@@ -417,7 +417,7 @@ if (!function_exists('get_active_plugins')) {
 if (!function_exists('get_cms_version')) {
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     function get_cms_version()

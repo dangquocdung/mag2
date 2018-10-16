@@ -17,7 +17,7 @@ class HookServiceProvider extends ServiceProvider
 
     /**
      * Boot the service provider.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {
@@ -32,7 +32,7 @@ class HookServiceProvider extends ServiceProvider
      * @param null $prefix
      * @return null|string
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function addSlugBox($screen, $object = null)
     {
@@ -49,7 +49,7 @@ class HookServiceProvider extends ServiceProvider
      * @param Model $model
      * @param string $screen
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getItemSlug($data, $model, $screen = null)
     {

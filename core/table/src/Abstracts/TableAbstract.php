@@ -99,7 +99,7 @@ abstract class TableAbstract extends DataTable
      * TableAbstract constructor.
      * @param DataTables $table
      * @param UrlGenerator $urlGenerator
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(Datatables $table, UrlGenerator $urlGenerator)
     {
@@ -123,7 +123,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function isHasFilter(): bool
     {
@@ -132,7 +132,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return RepositoryInterface
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getRepository()
     {
@@ -141,7 +141,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getType(): string
     {
@@ -151,7 +151,7 @@ abstract class TableAbstract extends DataTable
     /**
      * @param string $type
      * @return $this
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function setType(string $type): self
     {
@@ -161,7 +161,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getAjaxUrl(): string
     {
@@ -171,7 +171,7 @@ abstract class TableAbstract extends DataTable
     /**
      * @param string $ajax_url
      * @return $this
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function setAjaxUrl(string $ajax_url): self
     {
@@ -181,7 +181,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getView(): string
     {
@@ -191,7 +191,7 @@ abstract class TableAbstract extends DataTable
     /**
      * @param string $view
      * @return $this
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function setView(string $view): self
     {
@@ -201,7 +201,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getOptions(): array
     {
@@ -211,7 +211,7 @@ abstract class TableAbstract extends DataTable
     /**
      * @param $key
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getOption($key): string
     {
@@ -222,7 +222,7 @@ abstract class TableAbstract extends DataTable
     /**
      * @param array $options
      * @return $this
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function setOptions(array $options): self
     {
@@ -234,7 +234,7 @@ abstract class TableAbstract extends DataTable
      * @param $key
      * @param $value
      * @return $this
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function setOption($key, $value): self
     {
@@ -244,7 +244,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return null|string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function getDom()
     {
@@ -266,7 +266,7 @@ abstract class TableAbstract extends DataTable
      * Optional method if you want to use html builder.
      *
      * @return \Yajra\DataTables\Html\Builder
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      * @throws \Throwable
      */
@@ -323,7 +323,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function htmlInitComplete()
     {
@@ -332,7 +332,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function htmlInitCompleteFunction()
     {
@@ -358,7 +358,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function htmlDrawCallback()
     {
@@ -371,7 +371,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function htmlDrawCallbackFunction()
     {
@@ -405,7 +405,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      * @throws \Throwable
      */
@@ -431,7 +431,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function getDefaultButtons()
@@ -443,7 +443,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function getActionsButton()
@@ -463,7 +463,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function actions()
@@ -473,7 +473,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function buttons()
@@ -483,7 +483,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function getButtons()
@@ -510,7 +510,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      * @throws \Throwable
      */
@@ -533,7 +533,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     abstract public function columns();
@@ -542,7 +542,7 @@ abstract class TableAbstract extends DataTable
      * Get columns.
      *
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @since 2.1
      */
     public function getColumns()
@@ -574,7 +574,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getCheckboxColumnHeading()
     {
@@ -593,7 +593,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getOperationsHeading()
     {
@@ -615,7 +615,7 @@ abstract class TableAbstract extends DataTable
      * @param array $data
      * @param array $mergeData
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function render($view, $data = [], $mergeData = [])
@@ -651,7 +651,7 @@ abstract class TableAbstract extends DataTable
      * @return \Illuminate\Http\JsonResponse|\Illuminate\View\View
      * @since 2.4
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function renderTable($data = [], $mergeData = [])
     {
@@ -661,7 +661,7 @@ abstract class TableAbstract extends DataTable
     /**
      * @param \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder $query
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function applyScopes($query)
     {
@@ -692,7 +692,7 @@ abstract class TableAbstract extends DataTable
     /**
      * @return array
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function bulkActions(): array
     {
@@ -710,7 +710,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getBulkChanges(): array
     {
@@ -724,7 +724,7 @@ abstract class TableAbstract extends DataTable
      * @param null $data
      * @return array
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getValueInput($title, $value = null, $type, $data = null)
     {
@@ -768,7 +768,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function getYesNoSelect()
     {
@@ -782,7 +782,7 @@ abstract class TableAbstract extends DataTable
      * @param $key
      * @param $value
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function prepareBulkChangeValue($key, $value)
     {
@@ -840,7 +840,7 @@ abstract class TableAbstract extends DataTable
     /**
      * @return null
      * @throws \Throwable
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function renderFilter()
     {
@@ -877,7 +877,7 @@ abstract class TableAbstract extends DataTable
      * @param $operator
      * @param $value
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function applyFilterCondition($query, $key, $operator, $value)
     {

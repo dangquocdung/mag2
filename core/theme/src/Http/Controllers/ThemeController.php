@@ -19,7 +19,7 @@ class ThemeController extends BaseController
 {
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getList()
     {
@@ -36,7 +36,7 @@ class ThemeController extends BaseController
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getOptions()
     {
@@ -63,7 +63,7 @@ class ThemeController extends BaseController
      * @param SettingStore $settingStore
      * @return BaseHttpResponse
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postUpdate(Request $request, BaseHttpResponse $response, SettingStore $settingStore)
     {
@@ -83,7 +83,7 @@ class ThemeController extends BaseController
      * @param BaseHttpResponse $response
      * @param Kernel $kernel
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postActivateTheme(Request $request, BaseHttpResponse $response, Kernel $kernel)
     {
@@ -96,7 +96,7 @@ class ThemeController extends BaseController
     /**
      * @param FormBuilder $formBuilder
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getCustomCss(FormBuilder $formBuilder)
     {
@@ -124,7 +124,7 @@ class ThemeController extends BaseController
      * @param BaseHttpResponse $response
      * @param SettingStore $setting
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postCustomCss(CustomCssRequest $request, BaseHttpResponse $response, SettingStore $setting)
     {
@@ -143,7 +143,7 @@ class ThemeController extends BaseController
      * @param Kernel $kernel
      * @return mixed
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postRemoveTheme(Request $request, BaseHttpResponse $response, Kernel $kernel)
     {

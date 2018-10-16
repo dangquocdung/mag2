@@ -15,7 +15,7 @@ class PageRepository extends RepositoriesAbstract implements PageInterface
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDataSiteMap()
     {
@@ -28,7 +28,7 @@ class PageRepository extends RepositoriesAbstract implements PageInterface
 
     /**
      * @param $limit
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @return $this
      */
     public function getFeaturedPages($limit)
@@ -46,7 +46,7 @@ class PageRepository extends RepositoriesAbstract implements PageInterface
      * @param $array
      * @param array $select
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function whereIn($array, $select = [])
     {
@@ -66,7 +66,7 @@ class PageRepository extends RepositoriesAbstract implements PageInterface
      * @param $query
      * @param int $limit
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getSearch($query, $limit = 10)
     {
@@ -83,7 +83,7 @@ class PageRepository extends RepositoriesAbstract implements PageInterface
     /**
      * @param bool $active
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getAllPages($active = true)
     {

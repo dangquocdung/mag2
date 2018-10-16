@@ -101,7 +101,7 @@ class Shortcode
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getAll()
     {

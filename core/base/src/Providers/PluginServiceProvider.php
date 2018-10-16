@@ -9,7 +9,7 @@ use Schema;
 class PluginServiceProvider extends ServiceProvider
 {
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      * @throws \Exception
      */

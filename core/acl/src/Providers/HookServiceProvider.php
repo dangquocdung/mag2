@@ -16,7 +16,7 @@ class HookServiceProvider extends ServiceProvider
     protected $app;
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function boot()
     {
@@ -27,7 +27,7 @@ class HookServiceProvider extends ServiceProvider
      * @param array $widgets
      * @param Collection $widget_settings
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function addUserStatsWidget($widgets, $widget_settings)

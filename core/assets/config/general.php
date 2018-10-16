@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by Sublime Text 3.
- * User: Sang Nguyen
+ * User: Dung Thinh
  * Date: 22/07/2015
  * Time: 8:11 PM
  */

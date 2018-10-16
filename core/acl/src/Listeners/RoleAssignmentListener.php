@@ -15,7 +15,7 @@ class RoleAssignmentListener
 
     /**
      * RoleAssignmentListener constructor.
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @param UserInterface $userRepository
      */
     public function __construct(UserInterface $userRepository)
@@ -28,7 +28,7 @@ class RoleAssignmentListener
      *
      * @param  RoleAssignmentEvent $event
      * @return void
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Exception
      */
     public function handle(RoleAssignmentEvent $event)

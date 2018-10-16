@@ -10,7 +10,7 @@ interface RoleInterface extends RepositoryInterface
      * @param $name
      * @param $id
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function createSlug($name, $id);
 }

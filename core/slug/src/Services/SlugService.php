@@ -19,7 +19,7 @@ class SlugService
     /**
      * SlugService constructor.
      * @param SlugInterface $slugRepository
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(SlugInterface $slugRepository)
     {
@@ -30,7 +30,7 @@ class SlugService
      * @param $name
      * @param int $slug_id
      * @return int|string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function create($name, $slug_id = 0, $screen = null)
     {
@@ -53,7 +53,7 @@ class SlugService
      * @param $slug_id
      * @param $screen
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function checkIfExistedSlug($slug, $slug_id, $screen)
     {

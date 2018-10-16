@@ -1,5 +1,5 @@
 /**
- * Created by Sang Nguyen on 06/09/2015.
+ * Created by Dung Thinh on 06/09/2015.
  */
 
 class CropAvatar {

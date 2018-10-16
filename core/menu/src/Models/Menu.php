@@ -16,7 +16,7 @@ class Menu extends Eloquent
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function menuNodes()
     {
@@ -24,7 +24,7 @@ class Menu extends Eloquent
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected static function boot()
     {

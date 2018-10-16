@@ -11,7 +11,7 @@ use URL;
 class BreadcrumbsServiceProvider extends ServiceProvider
 {
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \DaveJamesMiller\Breadcrumbs\Exceptions\DuplicateBreadcrumbException
      */
     public function boot()
@@ -26,7 +26,7 @@ class BreadcrumbsServiceProvider extends ServiceProvider
 
         /**
          * Register breadcrumbs based on menu stored in session
-         * @author Sang Nguyen
+         * @author Dung Thinh
          */
         Breadcrumbs::register('main', function (BreadcrumbsGenerator $breadcrumbs, $defaultTitle = null) {
             $prefix = '/' . ltrim($this->app->make('request')->route()->getPrefix(), '/');

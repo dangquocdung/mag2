@@ -47,7 +47,7 @@ class Menu
      * @param HtmlBuilder $html
      * @param MenuNodeInterface $menuNodeRepository
      * @param CacheManager $cache
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(
         MenuInterface $menu,
@@ -65,7 +65,7 @@ class Menu
     /**
      * @param $name
      * @param $value
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @return $this
      */
     public function addRelatedRouteName($name, $value): self
@@ -85,7 +85,7 @@ class Menu
     /**
      * @param $args
      * @return mixed|null|string
-     * @author Sang Nguyen, Tedozi Manson
+     * @author Dung Thinh, Tedozi Manson
      * @throws \Throwable
      */
     public function generateMenu($args = [])
@@ -153,7 +153,7 @@ class Menu
     /**
      * @param array $args
      * @return mixed|null|string
-     * @author Sang Nguyen, Tedozi Manson
+     * @author Dung Thinh, Tedozi Manson
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      * @throws \Throwable
      */
@@ -214,7 +214,7 @@ class Menu
      * @param $slug
      * @param $active
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function hasMenu($slug, $active)
     {
@@ -229,7 +229,7 @@ class Menu
      * @param $menu_nodes
      * @param $menu_id
      * @param $parent_id
-     * @author Sang Nguyen, Tedozi Manson
+     * @author Dung Thinh, Tedozi Manson
      */
     public function recursiveSaveMenu($menu_nodes, $menu_id, $parent_id)
     {
@@ -256,7 +256,7 @@ class Menu
      * @param $parent_id
      * @param int $has_child
      * @return int
-     * @author Sang Nguyen, Tedozi Manson
+     * @author Dung Thinh, Tedozi Manson
      */
     protected function saveMenuNode($menu_item, $menu_id, $parent_id, $has_child = 0)
     {

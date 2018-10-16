@@ -26,7 +26,7 @@ class {Plugin}Controller extends BaseController
     /**
      * {Plugin}Controller constructor.
      * @param {Plugin}Interface ${+plugin}Repository
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct({Plugin}Interface ${+plugin}Repository)
     {
@@ -37,7 +37,7 @@ class {Plugin}Controller extends BaseController
      * Display all {plugins}
      * @param {Plugin}Table $dataTable
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function getList({Plugin}Table $table)
@@ -51,7 +51,7 @@ class {Plugin}Controller extends BaseController
     /**
      * @param FormBuilder $formBuilder
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getCreate(FormBuilder $formBuilder)
     {
@@ -65,7 +65,7 @@ class {Plugin}Controller extends BaseController
      *
      * @param {Plugin}Request $request
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postCreate({Plugin}Request $request, BaseHttpResponse $response)
     {
@@ -86,7 +86,7 @@ class {Plugin}Controller extends BaseController
      * @param Request $request
      * @param FormBuilder $formBuilder
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getEdit($id, FormBuilder $formBuilder, Request $request)
     {
@@ -103,7 +103,7 @@ class {Plugin}Controller extends BaseController
      * @param $id
      * @param {Plugin}Request $request
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postEdit($id, {Plugin}Request $request, BaseHttpResponse $response)
     {
@@ -124,7 +124,7 @@ class {Plugin}Controller extends BaseController
      * @param $id
      * @param Request $request
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDelete(Request $request, $id, BaseHttpResponse $response)
     {
@@ -147,7 +147,7 @@ class {Plugin}Controller extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postDeleteMany(Request $request, BaseHttpResponse $response)
     {

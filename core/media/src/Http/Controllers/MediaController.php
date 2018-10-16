@@ -22,7 +22,7 @@ use Storage;
 /**
  * Class MediaController
  * @package Botble\Media\Http\Controllers
- * @author Sang Nguyen
+ * @author Dung Thinh
  * @since 19/08/2015 08:05 AM
  */
 class MediaController extends Controller
@@ -53,7 +53,7 @@ class MediaController extends Controller
      * @param MediaFolderInterface $folderRepository
      * @param MediaSettingInterface $mediaSettingRepository
      * @param UploadsManager $uploadManager
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(
         MediaFileInterface $fileRepository,
@@ -70,7 +70,7 @@ class MediaController extends Controller
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getMedia(Request $request)
     {
@@ -85,7 +85,7 @@ class MediaController extends Controller
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function getPopup()
@@ -98,7 +98,7 @@ class MediaController extends Controller
      *
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getList(Request $request)
     {
@@ -260,7 +260,7 @@ class MediaController extends Controller
     /**
      * @param $folder
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function getResponseFolderData($folder)
     {
@@ -279,7 +279,7 @@ class MediaController extends Controller
     /**
      * @param $file
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function getResponseFileData($file)
     {
@@ -309,7 +309,7 @@ class MediaController extends Controller
     /**
      * @param Request $request
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function getBreadcrumbs(Request $request)
     {
@@ -347,7 +347,7 @@ class MediaController extends Controller
      * Get user quota
      *
      * @return \Illuminate\Http\JsonResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getQuota()
     {
@@ -596,7 +596,7 @@ class MediaController extends Controller
      * @param $file
      * @param int $new_folder_id
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function copyFile($file, $new_folder_id = null)
     {
@@ -652,7 +652,7 @@ class MediaController extends Controller
     /**
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\BinaryFileResponse|\Illuminate\Http\JsonResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws Exception
      */
     public function download(Request $request)

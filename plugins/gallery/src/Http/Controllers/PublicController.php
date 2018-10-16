@@ -27,7 +27,7 @@ class PublicController extends Controller
      * PublicController constructor.
      * @param GalleryInterface $galleryRepository
      * @param SlugInterface $slugRepository
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(GalleryInterface $galleryRepository, SlugInterface $slugRepository)
     {
@@ -36,7 +36,7 @@ class PublicController extends Controller
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function getGalleries()
@@ -56,7 +56,7 @@ class PublicController extends Controller
      * @param $slug
      * @return \Illuminate\Http\Response|\Response
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getGallery($slug)
     {

@@ -19,7 +19,7 @@ class MenuNode extends Eloquent
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function parent()
     {
@@ -28,7 +28,7 @@ class MenuNode extends Eloquent
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function child()
     {
@@ -37,7 +37,7 @@ class MenuNode extends Eloquent
 
     /**
      * @return mixed
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getRelated()
     {
@@ -64,7 +64,7 @@ class MenuNode extends Eloquent
 
     /**
      * @return bool
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function hasChild()
     {

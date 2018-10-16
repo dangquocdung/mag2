@@ -57,7 +57,7 @@ class RoleController extends BaseController
      *
      * @param RoleTable $dataTable
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function getList(RoleTable $dataTable)
@@ -72,7 +72,7 @@ class RoleController extends BaseController
      *
      * @param int $id
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDelete($id, BaseHttpResponse $response)
     {
@@ -88,7 +88,7 @@ class RoleController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postDeleteMany(Request $request, BaseHttpResponse $response)
     {
@@ -110,7 +110,7 @@ class RoleController extends BaseController
      * @param int $id
      * @param FormBuilder $formBuilder
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getEdit($id, FormBuilder $formBuilder)
     {
@@ -130,7 +130,7 @@ class RoleController extends BaseController
      * @param RoleCreateRequest $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postEdit($id, RoleCreateRequest $request, BaseHttpResponse $response)
     {
@@ -153,7 +153,7 @@ class RoleController extends BaseController
 
     /**
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getCreate(FormBuilder $formBuilder)
     {
@@ -170,7 +170,7 @@ class RoleController extends BaseController
      * @param RoleCreateRequest $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postCreate(RoleCreateRequest $request, BaseHttpResponse $response)
     {
@@ -194,7 +194,7 @@ class RoleController extends BaseController
      * @param int $id
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDuplicate($id, BaseHttpResponse $response)
     {
@@ -217,7 +217,7 @@ class RoleController extends BaseController
 
     /**
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getJson()
     {
@@ -234,7 +234,7 @@ class RoleController extends BaseController
 
     /**
      * @param Request $request
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postAssignMember(Request $request)
     {
@@ -254,7 +254,7 @@ class RoleController extends BaseController
      * Return a correctly type casted permissions array
      * @param array $permissions
      * @return array
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     protected function cleanPermission($permissions)
     {

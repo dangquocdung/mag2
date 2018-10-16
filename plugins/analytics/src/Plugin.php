@@ -9,21 +9,21 @@ use Botble\Dashboard\Repositories\Interfaces\DashboardWidgetInterface;
 class Plugin implements PluginInterface
 {
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public static function activate()
     {
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public static function deactivate()
     {
     }
 
     /**
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Exception
      */
     public static function remove()

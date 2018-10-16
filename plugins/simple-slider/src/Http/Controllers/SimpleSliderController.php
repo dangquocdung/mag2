@@ -33,7 +33,7 @@ class SimpleSliderController extends BaseController
      * SimpleSliderController constructor.
      * @param SimpleSliderInterface $simpleSliderRepository
      * @param SimpleSliderItemInterface $simpleSliderItemRepository
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function __construct(
         SimpleSliderInterface $simpleSliderRepository,
@@ -48,7 +48,7 @@ class SimpleSliderController extends BaseController
      * Display all simple-slider
      * @param SimpleSliderTable $dataTable
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * @author Sang Nguyen
+     * @author Dung Thinh
      * @throws \Throwable
      */
     public function getList(SimpleSliderTable $dataTable)
@@ -63,7 +63,7 @@ class SimpleSliderController extends BaseController
      * Show create form
      * @param FormBuilder $formBuilder
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getCreate(FormBuilder $formBuilder)
     {
@@ -81,7 +81,7 @@ class SimpleSliderController extends BaseController
      * @param SimpleSliderRequest $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postCreate(SimpleSliderRequest $request, BaseHttpResponse $response)
     {
@@ -101,7 +101,7 @@ class SimpleSliderController extends BaseController
      * @param $id
      * @param FormBuilder $formBuilder
      * @return string
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getEdit($id, FormBuilder $formBuilder)
     {
@@ -122,7 +122,7 @@ class SimpleSliderController extends BaseController
      * @param SimpleSliderRequest $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postEdit($id, SimpleSliderRequest $request, BaseHttpResponse $response)
     {
@@ -143,7 +143,7 @@ class SimpleSliderController extends BaseController
      * @param $id
      * @param BaseHttpResponse $response
      * @return array|BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function getDelete(Request $request, $id, BaseHttpResponse $response)
     {
@@ -165,7 +165,7 @@ class SimpleSliderController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return array|BaseHttpResponse|\Illuminate\Http\JsonResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postDeleteMany(Request $request, BaseHttpResponse $response)
     {
@@ -189,7 +189,7 @@ class SimpleSliderController extends BaseController
      * @param Request $request
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
-     * @author Sang Nguyen
+     * @author Dung Thinh
      */
     public function postSorting(Request $request, BaseHttpResponse $response)
     {
