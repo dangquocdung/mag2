@@ -1,1 +1,455 @@
-!function(e){function t(n){if(a[n])return a[n].exports;var r=a[n]={i:n,l:!1,exports:{}};return e[n].call(r.exports,r,r.exports,t),r.l=!0,r.exports}var a={};t.m=e,t.c=a,t.d=function(e,a,n){t.o(e,a)||Object.defineProperty(e,a,{configurable:!1,enumerable:!0,get:n})},t.n=function(e){var a=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(a,"a",a),a},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="/",t(t.s=111)}({111:function(e,t,a){e.exports=a(112)},112:function(e,t){!function(e,t){e.rails!==t&&e.error("jquery-ujs has already been loaded!");var a=void 0,n=e(document);e.rails=a={linkClickSelector:"a[data-confirm], a[data-method], a[data-remote], a[data-disable-with]",buttonClickSelector:"button[data-remote], button[data-confirm]",inputChangeSelector:"select[data-remote], input[data-remote], textarea[data-remote]",formSubmitSelector:"form",formInputClickSelector:"form input[type=submit], form input[type=image], form button[type=submit], form button:not([type])",disableSelector:"input[data-disable-with], button[data-disable-with], textarea[data-disable-with]",enableSelector:"input[data-disable-with]:disabled, button[data-disable-with]:disabled, textarea[data-disable-with]:disabled",requiredInputSelector:"input[name][required]:not([disabled]),textarea[name][required]:not([disabled])",fileInputSelector:"input[type=file]",linkDisableSelector:"a[data-disable-with]",buttonDisableSelector:"button[data-remote][data-disable-with]",CSRFProtection:function(t){var a=e('meta[name="csrf-token"]').attr("content");a&&t.setRequestHeader("X-CSRF-Token",a)},refreshCSRFTokens:function(){var t=e("meta[name=csrf-token]").attr("content"),a=e("meta[name=csrf-param]").attr("content");e('form input[name="'+a+'"]').val(t)},fire:function(t,a,n){var r=e.Event(a);return t.trigger(r,n),!1!==r.result},confirm:function(e){function t(t){return e.apply(this,arguments)}return t.toString=function(){return e.toString()},t}(function(e){return confirm(e)}),ajax:function(t){return e.ajax(t)},href:function(e){return e.attr("href")},handleRemote:function(n){var r=void 0,i=void 0,o=void 0,l=void 0,s=void 0,u=void 0,c=void 0,d=void 0;if(a.fire(n,"ajax:before")){if(s=(l=n.data("cross-domain"))===t?null:l,u=n.data("with-credentials")||null,c=n.data("type")||e.ajaxSettings&&e.ajaxSettings.dataType,n.is("form")){r=n.attr("method"),i=n.attr("action"),o=n.serializeArray();var m=n.data("ujs:submit-button");m&&(o.push(m),n.data("ujs:submit-button",null))}else n.is(a.inputChangeSelector)?(r=n.data("method"),i=n.data("url"),o=n.serialize(),n.data("params")&&(o=o+"&"+n.data("params"))):n.is(a.buttonClickSelector)?(r=n.data("method")||"get",i=n.data("url"),o=n.serialize(),n.data("params")&&(o=o+"&"+n.data("params"))):(r=n.data("method"),i=a.href(n),o=n.data("params")||null);return d={type:r||"GET",data:o,dataType:c,beforeSend:function(e,r){if(r.dataType===t&&e.setRequestHeader("accept","*/*;q=0.5, "+r.accepts.script),!a.fire(n,"ajax:beforeSend",[e,r]))return!1;n.trigger("ajax:send",e)},success:function(e,t,a){n.trigger("ajax:success",[e,t,a])},complete:function(e,t){n.trigger("ajax:complete",[e,t])},error:function(e,t,a){n.trigger("ajax:error",[e,t,a])},crossDomain:s},u&&(d.xhrFields={withCredentials:u}),i&&(d.url=i),a.ajax(d)}return!1},handleMethod:function(n){var r=a.href(n),i=n.data("method"),o=n.attr("target"),l=e("meta[name=csrf-token]").attr("content"),s=e("meta[name=csrf-param]").attr("content"),u=e('<form method="post" action="'+r+'"></form>'),c='<input name="_method" value="'+i+'" type="hidden" />';s!==t&&l!==t&&(c+='<input name="'+s+'" value="'+l+'" type="hidden" />'),o&&u.attr("target",o),u.hide().append(c).appendTo("body"),u.submit()},formElements:function(t,a){return t.is("form")?e(t[0].elements).filter(a):t.find(a)},disableFormElements:function(t){a.formElements(t,a.disableSelector).each(function(t,n){a.disableFormElement(e(n))})},disableFormElement:function(e){var t=e.is("button")?"html":"val";e.data("ujs:enable-with",e[t]()),e[t](e.data("disable-with")),e.prop("disabled",!0)},enableFormElements:function(t){a.formElements(t,a.enableSelector).each(function(t,n){a.enableFormElement(e(n))})},enableFormElement:function(e){var t=e.is("button")?"html":"val";e.data("ujs:enable-with")&&e[t](e.data("ujs:enable-with")),e.prop("disabled",!1)},allowAction:function(e){var t=e.data("confirm"),n=!1,r=void 0;return!t||(a.fire(e,"confirm")&&(n=a.confirm(t),r=a.fire(e,"confirm:complete",[n])),n&&r)},blankInputs:function(t,a,n){var r=e(),i=void 0,o=a||"input,textarea",l=t.find(o);return l.each(function(t,a){if(i=e(a),!(i.is("input[type=checkbox],input[type=radio]")?i.is(":checked"):i.val())==!n){if(i.is("input[type=radio]")&&l.filter('input[type=radio]:checked[name="'+i.attr("name")+'"]').length)return!0;r=r.add(i)}}),!!r.length&&r},nonBlankInputs:function(e,t){return a.blankInputs(e,t,!0)},stopEverything:function(t){return e(t.target).trigger("ujs:everythingStopped"),t.stopImmediatePropagation(),!1},disableElement:function(e){e.data("ujs:enable-with",e.html()),e.html(e.data("disable-with")),e.bind("click.railsDisable",function(e){return a.stopEverything(e)})},enableElement:function(e){e.data("ujs:enable-with")!==t&&(e.html(e.data("ujs:enable-with")),e.removeData("ujs:enable-with")),e.unbind("click.railsDisable")}},a.fire(n,"rails:attachBindings")&&(e.ajaxPrefilter(function(e,t,n){e.crossDomain||a.CSRFProtection(n)}),n.delegate(a.linkDisableSelector,"ajax:complete",function(){a.enableElement(e(this))}),n.delegate(a.buttonDisableSelector,"ajax:complete",function(){a.enableFormElement(e(this))}),n.delegate(a.linkClickSelector,"click.rails",function(n){var r=e(this),i=r.data("method"),o=r.data("params"),l=n.metaKey||n.ctrlKey;if(!a.allowAction(r))return a.stopEverything(n);if(!l&&r.is(a.linkDisableSelector)&&a.disableElement(r),r.data("remote")!==t){if(l&&(!i||"GET"===i)&&!o)return!0;var s=a.handleRemote(r);return!1===s?a.enableElement(r):s.error(function(){a.enableElement(r)}),!1}return r.data("method")?(a.handleMethod(r),!1):void 0}),n.delegate(a.buttonClickSelector,"click.rails",function(t){var n=e(this);if(!a.allowAction(n))return a.stopEverything(t);n.is(a.buttonDisableSelector)&&a.disableFormElement(n);var r=a.handleRemote(n);return!1===r?a.enableFormElement(n):r.error(function(){a.enableFormElement(n)}),!1}),n.delegate(a.inputChangeSelector,"change.rails",function(t){var n=e(this);return a.allowAction(n)?(a.handleRemote(n),!1):a.stopEverything(t)}),n.delegate(a.formSubmitSelector,"submit.rails",function(n){var r=e(this),i=r.data("remote")!==t,o=void 0,l=void 0;if(!a.allowAction(r))return a.stopEverything(n);if(r.attr("novalidate")==t&&(o=a.blankInputs(r,a.requiredInputSelector))&&a.fire(r,"ajax:aborted:required",[o]))return a.stopEverything(n);if(i){if(l=a.nonBlankInputs(r,a.fileInputSelector)){setTimeout(function(){a.disableFormElements(r)},13);var s=a.fire(r,"ajax:aborted:file",[l]);return s||setTimeout(function(){a.enableFormElements(r)},13),s}return a.handleRemote(r),!1}setTimeout(function(){a.disableFormElements(r)},13)}),n.delegate(a.formInputClickSelector,"click.rails",function(t){var n=e(this);if(!a.allowAction(n))return a.stopEverything(t);var r=n.attr("name"),i=r?{name:r,value:n.val()}:null;n.closest("form").data("ujs:submit-button",i)}),n.delegate(a.formSubmitSelector,"ajax:send.rails",function(t){this==t.target&&a.disableFormElements(e(this))}),n.delegate(a.formSubmitSelector,"ajax:complete.rails",function(t){this==t.target&&a.enableFormElements(e(this))}),e(function(){a.refreshCSRFTokens()}))}(jQuery),jQuery(document).ready(function(e){e(".editable").editable().on("hidden",function(t,a){var n=e(event.currentTarget).data("locale");if("save"===a&&e(event.currentTarget).removeClass("status-0").addClass("status-1"),"save"===a||"nochange"===a){var r=e(event.currentTarget).closest("tr").next().find(".editable.locale-"+n);setTimeout(function(){r.editable("show")},300)}}),e(".group-select").on("change",function(t){var a=e(t.currentTarget).val();window.location.href=a?route("translations.group.view")+e(t.currentTarget).val():route("translations.list")}),e("a.delete-key").click(function(t){t.preventDefault();var a=e(t.currentTarget).closest("tr"),n=e(t.currentTarget).attr("href"),r=a.attr("id");e.post(n,{id:r},function(){a.remove()})}),e(".form-import").on("ajax:success",function(t,a){e("div.success-import strong.counter").text(a.counter),e("div.success-import").slideDown()}),e(".form-find").on("ajax:success",function(t,a){e("div.success-find strong.counter").text(a.counter),e("div.success-find").slideDown()}),e(".form-publish").on("ajax:success",function(){e("div.success-publish").slideDown()})})}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 122);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 122:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(123);
+
+
+/***/ }),
+
+/***/ 123:
+/***/ (function(module, exports) {
+
+(function (e, t) {
+    if (e.rails !== t) {
+        e.error('jquery-ujs has already been loaded!');
+    }
+    var n = void 0;
+    var r = e(document);
+    e.rails = n = {
+        linkClickSelector: 'a[data-confirm], a[data-method], a[data-remote], a[data-disable-with]',
+        buttonClickSelector: 'button[data-remote], button[data-confirm]',
+        inputChangeSelector: 'select[data-remote], input[data-remote], textarea[data-remote]',
+        formSubmitSelector: 'form',
+        formInputClickSelector: 'form input[type=submit], form input[type=image], form button[type=submit], form button:not([type])',
+        disableSelector: 'input[data-disable-with], button[data-disable-with], textarea[data-disable-with]',
+        enableSelector: 'input[data-disable-with]:disabled, button[data-disable-with]:disabled, textarea[data-disable-with]:disabled',
+        requiredInputSelector: 'input[name][required]:not([disabled]),textarea[name][required]:not([disabled])',
+        fileInputSelector: 'input[type=file]',
+        linkDisableSelector: 'a[data-disable-with]',
+        buttonDisableSelector: 'button[data-remote][data-disable-with]',
+        CSRFProtection: function CSRFProtection(t) {
+            var n = e('meta[name="csrf-token"]').attr('content');
+            if (n) {
+                t.setRequestHeader('X-CSRF-Token', n);
+            }
+        },
+        refreshCSRFTokens: function refreshCSRFTokens() {
+            var t = e('meta[name=csrf-token]').attr('content');
+            var n = e('meta[name=csrf-param]').attr('content');
+            e('form input[name="' + n + '"]').val(t);
+        },
+        fire: function fire(t, n, r) {
+            var i = e.Event(n);
+            t.trigger(i, r);
+            return i.result !== false;
+        },
+        confirm: function (_confirm) {
+            function confirm(_x) {
+                return _confirm.apply(this, arguments);
+            }
+
+            confirm.toString = function () {
+                return _confirm.toString();
+            };
+
+            return confirm;
+        }(function (e) {
+            return confirm(e);
+        }),
+        ajax: function ajax(t) {
+            return e.ajax(t);
+        },
+        href: function href(e) {
+            return e.attr('href');
+        },
+        handleRemote: function handleRemote(r) {
+            var i = void 0,
+                s = void 0,
+                o = void 0,
+                u = void 0,
+                a = void 0,
+                f = void 0,
+                l = void 0,
+                c = void 0;
+            if (n.fire(r, 'ajax:before')) {
+                u = r.data('cross-domain');
+                a = u === t ? null : u;
+                f = r.data('with-credentials') || null;
+                l = r.data('type') || e.ajaxSettings && e.ajaxSettings.dataType;
+                if (r.is('form')) {
+                    i = r.attr('method');
+                    s = r.attr('action');
+                    o = r.serializeArray();
+                    var h = r.data('ujs:submit-button');
+                    if (h) {
+                        o.push(h);
+                        r.data('ujs:submit-button', null);
+                    }
+                } else if (r.is(n.inputChangeSelector)) {
+                    i = r.data('method');
+                    s = r.data('url');
+                    o = r.serialize();
+                    if (r.data('params')) o = o + '&' + r.data('params');
+                } else if (r.is(n.buttonClickSelector)) {
+                    i = r.data('method') || 'get';
+                    s = r.data('url');
+                    o = r.serialize();
+                    if (r.data('params')) o = o + '&' + r.data('params');
+                } else {
+                    i = r.data('method');
+                    s = n.href(r);
+                    o = r.data('params') || null;
+                }
+                c = {
+                    type: i || 'GET', data: o, dataType: l, beforeSend: function beforeSend(e, i) {
+                        if (i.dataType === t) {
+                            e.setRequestHeader('accept', '*/*;q=0.5, ' + i.accepts.script);
+                        }
+                        if (n.fire(r, 'ajax:beforeSend', [e, i])) {
+                            r.trigger('ajax:send', e);
+                        } else {
+                            return false;
+                        }
+                    }, success: function success(e, t, n) {
+                        r.trigger('ajax:success', [e, t, n]);
+                    }, complete: function complete(e, t) {
+                        r.trigger('ajax:complete', [e, t]);
+                    }, error: function error(e, t, n) {
+                        r.trigger('ajax:error', [e, t, n]);
+                    }, crossDomain: a
+                };
+                if (f) {
+                    c.xhrFields = { withCredentials: f };
+                }
+                if (s) {
+                    c.url = s;
+                }
+                return n.ajax(c);
+            } else {
+                return false;
+            }
+        },
+        handleMethod: function handleMethod(r) {
+            var i = n.href(r),
+                s = r.data('method'),
+                o = r.attr('target'),
+                u = e('meta[name=csrf-token]').attr('content'),
+                a = e('meta[name=csrf-param]').attr('content'),
+                f = e('<form method="post" action="' + i + '"></form>'),
+                l = '<input name="_method" value="' + s + '" type="hidden" />';
+            if (a !== t && u !== t) {
+                l += '<input name="' + a + '" value="' + u + '" type="hidden" />';
+            }
+            if (o) {
+                f.attr('target', o);
+            }
+            f.hide().append(l).appendTo('body');
+            f.submit();
+        },
+        formElements: function formElements(t, n) {
+            return t.is('form') ? e(t[0].elements).filter(n) : t.find(n);
+        },
+        disableFormElements: function disableFormElements(t) {
+            n.formElements(t, n.disableSelector).each(function (index, el) {
+                n.disableFormElement(e(el));
+            });
+        },
+        disableFormElement: function disableFormElement(e) {
+            var t = e.is('button') ? 'html' : 'val';
+            e.data('ujs:enable-with', e[t]());
+            e[t](e.data('disable-with'));
+            e.prop('disabled', true);
+        },
+        enableFormElements: function enableFormElements(t) {
+            n.formElements(t, n.enableSelector).each(function (index, el) {
+                n.enableFormElement(e(el));
+            });
+        },
+        enableFormElement: function enableFormElement(e) {
+            var t = e.is('button') ? 'html' : 'val';
+            if (e.data('ujs:enable-with')) e[t](e.data('ujs:enable-with'));
+            e.prop('disabled', false);
+        },
+        allowAction: function allowAction(e) {
+            var t = e.data('confirm'),
+                r = false,
+                i = void 0;
+            if (!t) {
+                return true;
+            }
+            if (n.fire(e, 'confirm')) {
+                r = n.confirm(t);
+                i = n.fire(e, 'confirm:complete', [r]);
+            }
+            return r && i;
+        },
+        blankInputs: function blankInputs(t, n, r) {
+            var i = e(),
+                s = void 0,
+                o = void 0,
+                u = n || 'input,textarea',
+                a = t.find(u);
+            a.each(function (index, el) {
+                s = e(el);
+                o = s.is('input[type=checkbox],input[type=radio]') ? s.is(':checked') : s.val();
+                if (!o === !r) {
+                    if (s.is("input[type=radio]") && a.filter('input[type=radio]:checked[name="' + s.attr("name") + '"]').length) {
+                        return true;
+                    }
+                    i = i.add(s);
+                }
+            });
+            return i.length ? i : false;
+        },
+        nonBlankInputs: function nonBlankInputs(e, t) {
+            return n.blankInputs(e, t, true);
+        },
+        stopEverything: function stopEverything(t) {
+            e(t.target).trigger('ujs:everythingStopped');
+            t.stopImmediatePropagation();
+            return false;
+        },
+        disableElement: function disableElement(e) {
+            e.data('ujs:enable-with', e.html());
+            e.html(e.data('disable-with'));
+            e.bind('click.railsDisable', function (e) {
+                return n.stopEverything(e);
+            });
+        },
+        enableElement: function enableElement(e) {
+            if (e.data('ujs:enable-with') !== t) {
+                e.html(e.data('ujs:enable-with'));
+                e.removeData('ujs:enable-with');
+            }
+            e.unbind('click.railsDisable');
+        }
+    };
+    if (n.fire(r, 'rails:attachBindings')) {
+        e.ajaxPrefilter(function (e, t, r) {
+            if (!e.crossDomain) {
+                n.CSRFProtection(r);
+            }
+        });
+        r.delegate(n.linkDisableSelector, 'ajax:complete', function () {
+            n.enableElement(e(this));
+        });
+        r.delegate(n.buttonDisableSelector, 'ajax:complete', function () {
+            n.enableFormElement(e(this));
+        });
+        r.delegate(n.linkClickSelector, 'click.rails', function (r) {
+            var i = e(this),
+                s = i.data('method'),
+                o = i.data('params'),
+                u = r.metaKey || r.ctrlKey;
+            if (!n.allowAction(i)) return n.stopEverything(r);
+            if (!u && i.is(n.linkDisableSelector)) n.disableElement(i);
+            if (i.data('remote') !== t) {
+                if (u && (!s || s === 'GET') && !o) {
+                    return true;
+                }
+                var a = n.handleRemote(i);
+                if (a === false) {
+                    n.enableElement(i);
+                } else {
+                    a.error(function () {
+                        n.enableElement(i);
+                    });
+                }
+                return false;
+            } else if (i.data('method')) {
+                n.handleMethod(i);
+                return false;
+            }
+        });
+        r.delegate(n.buttonClickSelector, 'click.rails', function (t) {
+            var r = e(this);
+            if (!n.allowAction(r)) return n.stopEverything(t);
+            if (r.is(n.buttonDisableSelector)) n.disableFormElement(r);
+            var i = n.handleRemote(r);
+            if (i === false) {
+                n.enableFormElement(r);
+            } else {
+                i.error(function () {
+                    n.enableFormElement(r);
+                });
+            }
+            return false;
+        });
+        r.delegate(n.inputChangeSelector, 'change.rails', function (t) {
+            var r = e(this);
+            if (!n.allowAction(r)) return n.stopEverything(t);
+            n.handleRemote(r);
+            return false;
+        });
+        r.delegate(n.formSubmitSelector, 'submit.rails', function (r) {
+            var i = e(this),
+                s = i.data('remote') !== t,
+                o = void 0,
+                u = void 0;
+            if (!n.allowAction(i)) return n.stopEverything(r);
+            if (i.attr('novalidate') == t) {
+                o = n.blankInputs(i, n.requiredInputSelector);
+                if (o && n.fire(i, 'ajax:aborted:required', [o])) {
+                    return n.stopEverything(r);
+                }
+            }
+            if (s) {
+                u = n.nonBlankInputs(i, n.fileInputSelector);
+                if (u) {
+                    setTimeout(function () {
+                        n.disableFormElements(i);
+                    }, 13);
+                    var a = n.fire(i, 'ajax:aborted:file', [u]);
+                    if (!a) {
+                        setTimeout(function () {
+                            n.enableFormElements(i);
+                        }, 13);
+                    }
+                    return a;
+                }
+                n.handleRemote(i);
+                return false;
+            } else {
+                setTimeout(function () {
+                    n.disableFormElements(i);
+                }, 13);
+            }
+        });
+        r.delegate(n.formInputClickSelector, 'click.rails', function (t) {
+            var r = e(this);
+            if (!n.allowAction(r)) return n.stopEverything(t);
+            var i = r.attr('name'),
+                s = i ? { name: i, value: r.val() } : null;
+            r.closest('form').data('ujs:submit-button', s);
+        });
+        r.delegate(n.formSubmitSelector, 'ajax:send.rails', function (t) {
+            if (this == t.target) n.disableFormElements(e(this));
+        });
+        r.delegate(n.formSubmitSelector, 'ajax:complete.rails', function (t) {
+            if (this == t.target) n.enableFormElements(e(this));
+        });
+        e(function () {
+            n.refreshCSRFTokens();
+        });
+    }
+})(jQuery);
+
+jQuery(document).ready(function ($) {
+
+    $('.editable').editable().on('hidden', function (e, reason) {
+        var locale = $(event.currentTarget).data('locale');
+        if (reason === 'save') {
+            $(event.currentTarget).removeClass('status-0').addClass('status-1');
+        }
+        if (reason === 'save' || reason === 'nochange') {
+            var $next = $(event.currentTarget).closest('tr').next().find('.editable.locale-' + locale);
+            setTimeout(function () {
+                $next.editable('show');
+            }, 300);
+        }
+    });
+
+    $('.group-select').on('change', function (event) {
+        var group = $(event.currentTarget).val();
+        if (group) {
+            window.location.href = route('translations.group.view') + $(event.currentTarget).val();
+        } else {
+            window.location.href = route('translations.list');
+        }
+    });
+
+    $('a.delete-key').click(function (event) {
+        event.preventDefault();
+        var row = $(event.currentTarget).closest('tr');
+        var url = $(event.currentTarget).attr('href');
+        var id = row.attr('id');
+        $.post(url, { id: id }, function () {
+            row.remove();
+        });
+    });
+
+    $('.form-import').on('ajax:success', function (e, data) {
+        $('div.success-import strong.counter').text(data.counter);
+        $('div.success-import').slideDown();
+    });
+
+    $('.form-find').on('ajax:success', function (e, data) {
+        $('div.success-find strong.counter').text(data.counter);
+        $('div.success-find').slideDown();
+    });
+
+    $('.form-publish').on('ajax:success', function () {
+        $('div.success-publish').slideDown();
+    });
+});
+
+/***/ })
+
+/******/ });

@@ -1,1 +1,133 @@
-!function(n){var e={};function t(r){if(e[r])return e[r].exports;var i=e[r]={i:r,l:!1,exports:{}};return n[r].call(i.exports,i,i.exports,t),i.l=!0,i.exports}t.m=n,t.c=e,t.d=function(n,e,r){t.o(n,e)||Object.defineProperty(n,e,{configurable:!1,enumerable:!0,get:r})},t.n=function(n){var e=n&&n.__esModule?function(){return n.default}:function(){return n};return t.d(e,"a",e),e},t.o=function(n,e){return Object.prototype.hasOwnProperty.call(n,e)},t.p="/",t(t.s=131)}({131:function(n,e,t){n.exports=t(132)},132:function(n,e){var t=function(){function n(n,e){for(var t=0;t<e.length;t++){var r=e[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(n,r.key,r)}}return function(e,t,r){return t&&n(e.prototype,t),r&&n(e,r),e}}();var r=function(){function n(){!function(n,e){if(!(n instanceof e))throw new TypeError("Cannot call a class as a function")}(this,n)}return t(n,[{key:"init",value:function(){$(".slider").each(function(n,e){var t=$(e).data("single");$(e).find(".post").hover(function(){var n=$(e).parent().find(".slider-control");n.hasClass("active")||n.addClass("active")},function(){var n=$(e).parent().find(".slider-control");n.hasClass("active")&&n.removeClass("active")}),$(e).owlCarousel({autoPlay:$(e).data("autoplay"),slideSpeed:3e3,paginationSpeed:400,singleItem:t}),$(e).siblings(".next").click(function(n){$(n.currentTarget).trigger("owl.next")}),$(e).siblings(".prev").click(function(n){$(n.currentTarget).trigger("owl.prev")})}),$(".slider-wrap").fadeIn()}}]),n}();$(document).ready(function(){(new r).init()})}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 142);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 142:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(143);
+
+
+/***/ }),
+
+/***/ 143:
+/***/ (function(module, exports) {
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SimpleSliderManagement = function () {
+    function SimpleSliderManagement() {
+        _classCallCheck(this, SimpleSliderManagement);
+    }
+
+    _createClass(SimpleSliderManagement, [{
+        key: 'init',
+        value: function init() {
+            var slider = $('.slider');
+            slider.each(function (index, el) {
+                var single = $(el).data('single');
+                $(el).find('.post').hover(function () {
+                    var parent = $(el).parent().find('.slider-control');
+                    if (!parent.hasClass('active')) {
+                        parent.addClass('active');
+                    }
+                }, function () {
+                    var parent = $(el).parent().find('.slider-control');
+                    if (parent.hasClass('active')) {
+                        parent.removeClass('active');
+                    }
+                });
+                $(el).owlCarousel({
+                    autoPlay: $(el).data('autoplay'),
+                    slideSpeed: 3000,
+                    paginationSpeed: 400,
+                    singleItem: single
+                });
+
+                $(el).siblings('.next').click(function (event) {
+                    $(event.currentTarget).trigger('owl.next');
+                });
+                $(el).siblings('.prev').click(function (event) {
+                    $(event.currentTarget).trigger('owl.prev');
+                });
+            });
+
+            $('.slider-wrap').fadeIn();
+        }
+    }]);
+
+    return SimpleSliderManagement;
+}();
+
+$(document).ready(function () {
+    new SimpleSliderManagement().init();
+});
+
+/***/ })
+
+/******/ });

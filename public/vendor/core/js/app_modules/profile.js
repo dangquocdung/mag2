@@ -1,1 +1,440 @@
-!function(t){var a={};function i(e){if(a[e])return a[e].exports;var r=a[e]={i:e,l:!1,exports:{}};return t[e].call(r.exports,r,r.exports,i),r.l=!0,r.exports}i.m=t,i.c=a,i.d=function(t,a,e){i.o(t,a)||Object.defineProperty(t,a,{configurable:!1,enumerable:!0,get:e})},i.n=function(t){var a=t&&t.__esModule?function(){return t.default}:function(){return t};return i.d(a,"a",a),a},i.o=function(t,a){return Object.prototype.hasOwnProperty.call(t,a)},i.p="/",i(i.s=84)}({84:function(t,a,i){t.exports=i(85)},85:function(t,a){var i=function(){function t(t,a){for(var i=0;i<a.length;i++){var e=a[i];e.enumerable=e.enumerable||!1,e.configurable=!0,"value"in e&&(e.writable=!0),Object.defineProperty(t,e.key,e)}}return function(a,i,e){return i&&t(a.prototype,i),e&&t(a,e),a}}();function e(t,a){if(!(t instanceof a))throw new TypeError("Cannot call a class as a function")}var r=function(){function t(a){e(this,t),this.$container=a,this.$avatarView=this.$container.find(".avatar-view"),this.$triggerButton=this.$avatarView.find(".mt-overlay .btn-outline"),this.$avatar=this.$avatarView.find("img"),this.$avatarModal=this.$container.find("#avatar-modal"),this.$loading=this.$container.find(".loading"),this.$avatarForm=this.$avatarModal.find(".avatar-form"),this.$avatarSrc=this.$avatarForm.find(".avatar-src"),this.$avatarData=this.$avatarForm.find(".avatar-data"),this.$avatarInput=this.$avatarForm.find(".avatar-input"),this.$avatarSave=this.$avatarForm.find(".avatar-save"),this.$avatarWrapper=this.$avatarModal.find(".avatar-wrapper"),this.$avatarPreview=this.$avatarModal.find(".avatar-preview"),this.support={fileList:!!$('<input type="file">').prop("files"),fileReader:!!window.FileReader,formData:!!window.FormData}}return i(t,[{key:"init",value:function(){this.support.datauri=this.support.fileList&&this.support.fileReader,this.support.formData||this.initIframe(),this.initTooltip(),this.initModal(),this.addListener()}},{key:"addListener",value:function(){this.$triggerButton.on("click",$.proxy(this.click,this)),this.$avatarInput.on("change",$.proxy(this.change,this)),this.$avatarForm.on("submit",$.proxy(this.submit,this))}},{key:"initTooltip",value:function(){this.$avatarView.tooltip({placement:"bottom"})}},{key:"initModal",value:function(){this.$avatarModal.modal("hide"),this.initPreview()}},{key:"initPreview",value:function(){var t=this.$avatar.prop("src");this.$avatarPreview.empty().html('<img src="'+t+'">')}},{key:"initIframe",value:function(){var t="avatar-iframe-"+Math.random().toString().replace(".",""),a=$('<iframe name="'+t+'" style="display:none;"></iframe>'),i=!0,e=this;this.$iframe=a,this.$avatarForm.attr("target",t).after(a),this.$iframe.on("load",function(){var t=void 0,a=void 0,r=void 0;try{a=this.contentWindow,t=(r=(r=this.contentDocument)||a.document)?r.body.innerText:null}catch(t){}t?e.submitDone(t):i?i=!1:e.submitFail("Image upload failed!"),e.submitEnd()})}},{key:"click",value:function(){this.$avatarModal.modal("show")}},{key:"change",value:function(){var a=void 0,i=void 0;this.support.datauri?(a=this.$avatarInput.prop("files")).length>0&&(i=a[0],t.isImageFile(i)&&this.read(i)):(i=this.$avatarInput.val(),t.isImageFile(i)&&this.syncUpload())}},{key:"submit",value:function(){return this.$avatarSrc.val()||this.$avatarInput.val()?this.support.formData?(this.ajaxUpload(),!1):void 0:(Botble.showNotice("error","Please select image!"),!1)}},{key:"read",value:function(t){var a=this,i=new FileReader;i.readAsDataURL(t),i.onload=function(){a.url=this.result,a.startCropper()}}},{key:"startCropper",value:function(){var t=this;this.active?this.$img.cropper("replace",this.url):(this.$img=$('<img src="'+this.url+'">'),this.$avatarWrapper.empty().html(this.$img),this.$img.cropper({aspectRatio:1,rotatable:!0,preview:this.$avatarPreview.selector,done:function(a){var i=['{"x":'+a.x,'"y":'+a.y,'"height":'+a.height,'"width":'+a.width+"}"].join();t.$avatarData.val(i)}}),this.active=!0)}},{key:"stopCropper",value:function(){this.active&&(this.$img.cropper("destroy"),this.$img.remove(),this.active=!1)}},{key:"ajaxUpload",value:function(){var t=this.$avatarForm.attr("action"),a=new FormData(this.$avatarForm[0]),i=this;$.ajax(t,{type:"POST",data:a,processData:!1,contentType:!1,beforeSend:function(){i.submitStart()},success:function(t){i.submitDone(t)},error:function(t,a,e){i.submitFail(t.responseJSON,a||e)},complete:function(){i.submitEnd()}})}},{key:"syncUpload",value:function(){this.$avatarSave.click()}},{key:"submitStart",value:function(){this.$loading.fadeIn(),this.$avatarSave.attr("disabled",!0).text("Saving...")}},{key:"submitDone",value:function(t){try{t=$.parseJSON(t)}catch(t){}t&&!t.error?t.data?(this.url=t.data,this.support.datauri||this.uploaded?(this.uploaded=!1,this.cropDone()):(this.uploaded=!0,this.$avatarSrc.val(this.url),this.startCropper()),this.$avatarInput.val(""),Botble.showNotice("success",t.message)):Botble.showNotice("error",t.message):Botble.showNotice("error","Failed to response")}},{key:"submitEnd",value:function(){this.$loading.fadeOut(),this.$avatarSave.removeAttr("disabled").text("Save")}},{key:"cropDone",value:function(){this.$avatarSrc.val(""),this.$avatarData.val(""),this.$avatar.prop("src",this.url),$(".user-menu img").prop("src",this.url),$(".user.dropdown img").prop("src",this.url),this.stopCropper(),this.initModal()}}],[{key:"isImageFile",value:function(t){return t.type?/^image\/\w+$/.test(t.type):/\.(jpg|jpeg|png|gif)$/.test(t)}},{key:"submitFail",value:function(t){Botble.handleError(t)}}]),t}(),n=function(){function t(){e(this,t)}return i(t,[{key:"init",value:function(){var t=$(":password"),a=$(".pwstrength_viewport_progress");if(t.length>0){var i={ui:{container:"#pwd-container",verdicts:["<span class='fa fa-exclamation-triangle'></span> Weak","<span class='fa fa-exclamation-triangle'></span> Normal","Medium","<span class='fa fa-thumbs-up'></span> Strong","<span class='fa fa-thumbs-up'></span> Very Strong"],showVerdictsInsideProgressBar:!0,viewports:{progress:".pwstrength_viewport_progress"}}};i.common={debug:!0,onLoad:function(){$("#messages").text("Start typing password")}},t.pwstrength(i),a.hide(),t.keypress(function(){a.fadeIn()}).blur(function(){""===$(event.currentTarget).val()&&a.hide()})}}}]),t}();$(document).ready(function(){new r($(".crop-avatar")).init(),(new n).init()})}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 87);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 87:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(88);
+
+
+/***/ }),
+
+/***/ 88:
+/***/ (function(module, exports) {
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+ * Created by Dung Thinh on 06/09/2015.
+ */
+
+var CropAvatar = function () {
+    function CropAvatar($element) {
+        _classCallCheck(this, CropAvatar);
+
+        this.$container = $element;
+
+        this.$avatarView = this.$container.find('.avatar-view');
+        this.$triggerButton = this.$avatarView.find('.mt-overlay .btn-outline');
+        this.$avatar = this.$avatarView.find('img');
+        this.$avatarModal = this.$container.find('#avatar-modal');
+        this.$loading = this.$container.find('.loading');
+
+        this.$avatarForm = this.$avatarModal.find('.avatar-form');
+        this.$avatarSrc = this.$avatarForm.find('.avatar-src');
+        this.$avatarData = this.$avatarForm.find('.avatar-data');
+        this.$avatarInput = this.$avatarForm.find('.avatar-input');
+        this.$avatarSave = this.$avatarForm.find('.avatar-save');
+
+        this.$avatarWrapper = this.$avatarModal.find('.avatar-wrapper');
+        this.$avatarPreview = this.$avatarModal.find('.avatar-preview');
+        this.support = {
+            fileList: !!$('<input type="file">').prop('files'),
+            fileReader: !!window.FileReader,
+            formData: !!window.FormData
+        };
+    }
+
+    _createClass(CropAvatar, [{
+        key: 'init',
+        value: function init() {
+            this.support.datauri = this.support.fileList && this.support.fileReader;
+
+            if (!this.support.formData) {
+                this.initIframe();
+            }
+
+            this.initTooltip();
+            this.initModal();
+            this.addListener();
+        }
+    }, {
+        key: 'addListener',
+        value: function addListener() {
+            this.$triggerButton.on('click', $.proxy(this.click, this));
+            this.$avatarInput.on('change', $.proxy(this.change, this));
+            this.$avatarForm.on('submit', $.proxy(this.submit, this));
+        }
+    }, {
+        key: 'initTooltip',
+        value: function initTooltip() {
+            this.$avatarView.tooltip({
+                placement: 'bottom'
+            });
+        }
+    }, {
+        key: 'initModal',
+        value: function initModal() {
+            this.$avatarModal.modal('hide');
+            this.initPreview();
+        }
+    }, {
+        key: 'initPreview',
+        value: function initPreview() {
+            var url = this.$avatar.prop('src');
+
+            this.$avatarPreview.empty().html('<img src="' + url + '">');
+        }
+    }, {
+        key: 'initIframe',
+        value: function initIframe() {
+            var iframeName = 'avatar-iframe-' + Math.random().toString().replace('.', ''),
+                $iframe = $('<iframe name="' + iframeName + '" style="display:none;"></iframe>'),
+                firstLoad = true,
+                _this = this;
+
+            this.$iframe = $iframe;
+            this.$avatarForm.attr('target', iframeName).after($iframe);
+
+            this.$iframe.on('load', function () {
+                var data = void 0,
+                    win = void 0,
+                    doc = void 0;
+
+                try {
+                    win = this.contentWindow;
+                    doc = this.contentDocument;
+
+                    doc = doc ? doc : win.document;
+                    data = doc ? doc.body.innerText : null;
+                } catch (e) {}
+
+                if (data) {
+                    _this.submitDone(data);
+                } else {
+                    if (firstLoad) {
+                        firstLoad = false;
+                    } else {
+                        _this.submitFail('Image upload failed!');
+                    }
+                }
+
+                _this.submitEnd();
+            });
+        }
+    }, {
+        key: 'click',
+        value: function click() {
+            this.$avatarModal.modal('show');
+        }
+    }, {
+        key: 'change',
+        value: function change() {
+            var files = void 0,
+                file = void 0;
+
+            if (this.support.datauri) {
+                files = this.$avatarInput.prop('files');
+
+                if (files.length > 0) {
+                    file = files[0];
+
+                    if (CropAvatar.isImageFile(file)) {
+                        this.read(file);
+                    }
+                }
+            } else {
+                file = this.$avatarInput.val();
+
+                if (CropAvatar.isImageFile(file)) {
+                    this.syncUpload();
+                }
+            }
+        }
+    }, {
+        key: 'submit',
+        value: function submit() {
+            if (!this.$avatarSrc.val() && !this.$avatarInput.val()) {
+                Botble.showNotice('error', 'Please select image!');
+                return false;
+            }
+
+            if (this.support.formData) {
+                this.ajaxUpload();
+                return false;
+            }
+        }
+    }, {
+        key: 'read',
+        value: function read(file) {
+            var _this = this,
+                fileReader = new FileReader();
+
+            fileReader.readAsDataURL(file);
+
+            fileReader.onload = function () {
+                _this.url = this.result;
+                _this.startCropper();
+            };
+        }
+    }, {
+        key: 'startCropper',
+        value: function startCropper() {
+            var _this = this;
+
+            if (this.active) {
+                this.$img.cropper('replace', this.url);
+            } else {
+                this.$img = $('<img src="' + this.url + '">');
+                this.$avatarWrapper.empty().html(this.$img);
+                this.$img.cropper({
+                    aspectRatio: 1,
+                    rotatable: true,
+                    preview: this.$avatarPreview.selector,
+                    done: function done(data) {
+                        var json = ['{"x":' + data.x, '"y":' + data.y, '"height":' + data.height, '"width":' + data.width + "}"].join();
+
+                        _this.$avatarData.val(json);
+                    }
+                });
+
+                this.active = true;
+            }
+        }
+    }, {
+        key: 'stopCropper',
+        value: function stopCropper() {
+            if (this.active) {
+                this.$img.cropper('destroy');
+                this.$img.remove();
+                this.active = false;
+            }
+        }
+    }, {
+        key: 'ajaxUpload',
+        value: function ajaxUpload() {
+            var url = this.$avatarForm.attr('action'),
+                data = new FormData(this.$avatarForm[0]),
+                _this = this;
+
+            $.ajax(url, {
+                type: 'POST',
+                data: data,
+                processData: false,
+                contentType: false,
+
+                beforeSend: function beforeSend() {
+                    _this.submitStart();
+                },
+
+                success: function success(data) {
+                    _this.submitDone(data);
+                },
+
+                error: function error(XMLHttpRequest, textStatus, errorThrown) {
+                    _this.submitFail(XMLHttpRequest.responseJSON, textStatus || errorThrown);
+                },
+
+                complete: function complete() {
+                    _this.submitEnd();
+                }
+            });
+        }
+    }, {
+        key: 'syncUpload',
+        value: function syncUpload() {
+            this.$avatarSave.click();
+        }
+    }, {
+        key: 'submitStart',
+        value: function submitStart() {
+            this.$loading.fadeIn();
+            this.$avatarSave.attr('disabled', true).text('Saving...');
+        }
+    }, {
+        key: 'submitDone',
+        value: function submitDone(data) {
+
+            try {
+                data = $.parseJSON(data);
+            } catch (e) {}
+
+            if (data && !data.error) {
+                if (data.data) {
+                    this.url = data.data;
+
+                    if (this.support.datauri || this.uploaded) {
+                        this.uploaded = false;
+                        this.cropDone();
+                    } else {
+                        this.uploaded = true;
+                        this.$avatarSrc.val(this.url);
+                        this.startCropper();
+                    }
+
+                    this.$avatarInput.val('');
+                    Botble.showNotice('success', data.message);
+                } else {
+                    Botble.showNotice('error', data.message);
+                }
+            } else {
+                Botble.showNotice('error', 'Failed to response');
+            }
+        }
+    }, {
+        key: 'submitEnd',
+        value: function submitEnd() {
+            this.$loading.fadeOut();
+            this.$avatarSave.removeAttr('disabled').text('Save');
+        }
+    }, {
+        key: 'cropDone',
+        value: function cropDone() {
+            this.$avatarSrc.val('');
+            this.$avatarData.val('');
+            this.$avatar.prop('src', this.url);
+            $('.user-menu img').prop('src', this.url);
+            $('.user.dropdown img').prop('src', this.url);
+            this.stopCropper();
+            this.initModal();
+        }
+    }], [{
+        key: 'isImageFile',
+        value: function isImageFile(file) {
+            if (file.type) {
+                return (/^image\/\w+$/.test(file.type)
+                );
+            } else {
+                return (/\.(jpg|jpeg|png|gif)$/.test(file)
+                );
+            }
+        }
+    }, {
+        key: 'submitFail',
+        value: function submitFail(errors) {
+            Botble.handleError(errors);
+        }
+    }]);
+
+    return CropAvatar;
+}();
+
+var UserPassword = function () {
+    function UserPassword() {
+        _classCallCheck(this, UserPassword);
+    }
+
+    _createClass(UserPassword, [{
+        key: 'init',
+        value: function init() {
+            var $password_field = $(':password');
+            var $password_field_progress = $('.pwstrength_viewport_progress');
+            if ($password_field.length > 0) {
+                var options = {};
+                options.ui = {
+                    container: "#pwd-container",
+                    verdicts: ["<span class='fa fa-exclamation-triangle'></span> Weak", "<span class='fa fa-exclamation-triangle'></span> Normal", 'Medium', "<span class='fa fa-thumbs-up'></span> Strong", "<span class='fa fa-thumbs-up'></span> Very Strong"],
+                    showVerdictsInsideProgressBar: true,
+                    viewports: {
+                        progress: '.pwstrength_viewport_progress'
+                    }
+                };
+                options.common = {
+                    debug: true,
+                    onLoad: function onLoad() {
+                        $('#messages').text('Start typing password');
+                    }
+                };
+
+                $password_field.pwstrength(options);
+
+                $password_field_progress.hide();
+                $password_field.keypress(function () {
+                    $password_field_progress.fadeIn();
+                }).blur(function () {
+                    if ($(event.currentTarget).val() === '') {
+                        $password_field_progress.hide();
+                    }
+                });
+            }
+        }
+    }]);
+
+    return UserPassword;
+}();
+
+$(document).ready(function () {
+    new CropAvatar($('.crop-avatar')).init();
+
+    new UserPassword().init();
+});
+
+/***/ })
+
+/******/ });

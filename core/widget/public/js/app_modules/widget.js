@@ -1,1 +1,230 @@
-!function(e){function t(n){if(o[n])return o[n].exports;var a=o[n]={i:n,l:!1,exports:{}};return e[n].call(a.exports,a,a.exports,t),a.l=!0,a.exports}var o={};t.m=e,t.c=o,t.d=function(e,o,n){t.o(e,o)||Object.defineProperty(e,o,{configurable:!1,enumerable:!0,get:n})},t.n=function(e){var o=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(o,"a",o),o},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="/",t(t.s=96)}({96:function(e,t,o){e.exports=o(97)},97:function(e,t){var o=function(){function e(e,t){for(var o=0;o<t.length;o++){var n=t[o];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,o,n){return o&&e(t.prototype,o),n&&e(t,n),t}}(),n=function(){function e(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e)}return o(e,[{key:"init",value:function(){var e=[{name:"wrap-widgets",pull:"clone",put:!1}];$.each($(".sidebar-item"),function(){e.push({name:"wrap-widgets",pull:!0,put:!0})});var t=function(e){if(e.length>0){var t=[];$.each(e.find("li"),function(e,o){t.push($(o).find("form").serialize())}),$.ajax({type:"POST",cache:!1,url:BWidget.routes.save_widgets_sidebar,data:{items:t,sidebar_id:e.data("id")},beforeSend:function(){Botble.showNotice("info",BotbleVariables.languages.notices_msg.processing_request)},success:function(t){t.error?Botble.showNotice("error",t.message):(e.find("ul").html(t.data),Botble.callScroll($(".list-page-select-widget")),Botble.showNotice("success",t.message)),e.find(".widget_save i").remove()},error:function(t){Botble.handleError(t),e.find(".widget_save i").remove()}})}};e.forEach(function(e,o){Sortable.create(document.getElementById("wrap-widget-"+(o+1)),{sort:0!==o,group:e,delay:0,disabled:!1,store:null,animation:150,handle:".widget-handle",ghostClass:"sortable-ghost",chosenClass:"sortable-chosen",dataIdAttr:"data-id",forceFallback:!1,fallbackClass:"sortable-fallback",fallbackOnBody:!1,scroll:!0,scrollSensitivity:30,scrollSpeed:10,onEnd:function(e){e.from!==e.to&&t($(e.from).closest(".sidebar-item")),t($(e.item).closest(".sidebar-item"))}})});var o=$("#wrap-widgets");o.on("click",".widget-control-delete",function(e){e.preventDefault();var t=$(e.currentTarget),o=t.closest("li");t.addClass("button-loading"),$.ajax({type:"POST",cache:!1,url:BWidget.routes.delete,data:{widget_id:o.data("id"),position:o.data("position"),sidebar_id:t.closest(".sidebar-item").data("id")},beforeSend:function(){Botble.showNotice("info",BotbleVariables.languages.notices_msg.processing_request)},success:function(e){e.error?Botble.showNotice("error",e.message):(Botble.showNotice("success",e.message),o.fadeOut().remove()),o.find(".widget-control-delete").removeClass("button-loading")},error:function(e){Botble.handleError(e),o.find(".widget-control-delete").removeClass("button-loading")}})}),o.on("click","#added-widget .widget-handle",function(e){var t=$(e.currentTarget);t.closest("li").find(".widget-content").slideToggle(300),t.find(".fa").toggleClass("fa-caret-up"),t.find(".fa").toggleClass("fa-caret-down")}),o.on("click",".widget_save",function(e){e.preventDefault();var o=$(e.currentTarget);o.addClass("button-loading"),t(o.closest(".sidebar-item"))}),Botble.callScroll($(".list-page-select-widget"))}}]),e}();$(document).ready(function(){(new n).init()})}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 99);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 100:
+/***/ (function(module, exports) {
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var WidgetManagement = function () {
+    function WidgetManagement() {
+        _classCallCheck(this, WidgetManagement);
+    }
+
+    _createClass(WidgetManagement, [{
+        key: 'init',
+        value: function init() {
+            var list_widgets = [{
+                name: 'wrap-widgets',
+                pull: 'clone',
+                put: false
+            }];
+
+            $.each($('.sidebar-item'), function () {
+                list_widgets.push({ name: 'wrap-widgets', pull: true, put: true });
+            });
+
+            var saveWidget = function saveWidget(parentElement) {
+                if (parentElement.length > 0) {
+                    var items = [];
+                    $.each(parentElement.find('li'), function (index, widget) {
+                        items.push($(widget).find('form').serialize());
+                    });
+                    $.ajax({
+                        type: 'POST',
+                        cache: false,
+                        url: BWidget.routes.save_widgets_sidebar,
+                        data: {
+                            items: items,
+                            sidebar_id: parentElement.data('id')
+                        },
+                        beforeSend: function beforeSend() {
+                            Botble.showNotice('info', BotbleVariables.languages.notices_msg.processing_request);
+                        },
+                        success: function success(data) {
+                            if (data.error) {
+                                Botble.showNotice('error', data.message);
+                            } else {
+                                parentElement.find('ul').html(data.data);
+                                Botble.callScroll($('.list-page-select-widget'));
+                                Botble.showNotice('success', data.message);
+                            }
+
+                            parentElement.find('.widget_save i').remove();
+                        },
+                        error: function error(data) {
+                            Botble.handleError(data);
+                            parentElement.find('.widget_save i').remove();
+                        }
+                    });
+                }
+            };
+
+            list_widgets.forEach(function (groupOpts, i) {
+                Sortable.create(document.getElementById('wrap-widget-' + (i + 1)), {
+                    sort: i !== 0,
+                    group: groupOpts,
+                    delay: 0, // time in milliseconds to define when the sorting should start
+                    disabled: false, // Disables the sortable if set to true.
+                    store: null, // @see Store
+                    animation: 150, // ms, animation speed moving items when sorting, `0` — without animation
+                    handle: '.widget-handle',
+                    ghostClass: 'sortable-ghost', // Class name for the drop placeholder
+                    chosenClass: 'sortable-chosen', // Class name for the chosen item
+                    dataIdAttr: 'data-id',
+
+                    forceFallback: false, // ignore the HTML5 DnD behaviour and force the fallback to kick in
+                    fallbackClass: "sortable-fallback", // Class name for the cloned DOM Element when using forceFallback
+                    fallbackOnBody: false, // Appends the cloned DOM Element into the Document's Body
+
+                    scroll: true, // or HTMLElement
+                    scrollSensitivity: 30, // px, how near the mouse must be to an edge to start scrolling.
+                    scrollSpeed: 10, // px
+
+                    // dragging ended
+                    onEnd: function onEnd(evt) {
+                        if (evt.from !== evt.to) {
+                            saveWidget($(evt.from).closest('.sidebar-item'));
+                        }
+                        saveWidget($(evt.item).closest('.sidebar-item'));
+                    }
+                });
+            });
+
+            var widget_wrap = $('#wrap-widgets');
+            widget_wrap.on('click', '.widget-control-delete', function (event) {
+                event.preventDefault();
+                var _self = $(event.currentTarget);
+
+                var widget = _self.closest('li');
+                _self.addClass('button-loading');
+                $.ajax({
+                    type: 'POST',
+                    cache: false,
+                    url: BWidget.routes.delete,
+                    data: {
+                        widget_id: widget.data('id'),
+                        position: widget.data('position'),
+                        sidebar_id: _self.closest('.sidebar-item').data('id')
+                    },
+                    beforeSend: function beforeSend() {
+                        Botble.showNotice('info', BotbleVariables.languages.notices_msg.processing_request);
+                    },
+                    success: function success(data) {
+                        if (data.error) {
+                            Botble.showNotice('error', data.message);
+                        } else {
+                            Botble.showNotice('success', data.message);
+                            widget.fadeOut().remove();
+                        }
+                        widget.find('.widget-control-delete').removeClass('button-loading');
+                    },
+                    error: function error(data) {
+                        Botble.handleError(data);
+                        widget.find('.widget-control-delete').removeClass('button-loading');
+                    }
+                });
+            });
+
+            widget_wrap.on('click', '#added-widget .widget-handle', function (event) {
+                var _self = $(event.currentTarget);
+                _self.closest('li').find('.widget-content').slideToggle(300);
+                _self.find('.fa').toggleClass('fa-caret-up');
+                _self.find('.fa').toggleClass('fa-caret-down');
+            });
+
+            widget_wrap.on('click', '.widget_save', function (event) {
+                event.preventDefault();
+                var _self = $(event.currentTarget);
+                _self.addClass('button-loading');
+                saveWidget(_self.closest('.sidebar-item'));
+            });
+
+            Botble.callScroll($('.list-page-select-widget'));
+        }
+    }]);
+
+    return WidgetManagement;
+}();
+
+$(document).ready(function () {
+    new WidgetManagement().init();
+});
+
+/***/ }),
+
+/***/ 99:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(100);
+
+
+/***/ })
+
+/******/ });

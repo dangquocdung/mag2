@@ -1,1 +1,221 @@
-!function(r){var e={};function n(o){if(e[o])return e[o].exports;var t=e[o]={i:o,l:!1,exports:{}};return r[o].call(t.exports,t,t.exports,n),t.l=!0,t.exports}n.m=r,n.c=e,n.d=function(r,e,o){n.o(r,e)||Object.defineProperty(r,e,{configurable:!1,enumerable:!0,get:o})},n.n=function(r){var e=r&&r.__esModule?function(){return r.default}:function(){return r};return n.d(e,"a",e),e},n.o=function(r,e){return Object.prototype.hasOwnProperty.call(r,e)},n.p="/",n(n.s=86)}({86:function(r,e,n){r.exports=n(87)},87:function(r,e){var n=function(){function r(r,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(r,o.key,o)}}return function(e,n,o){return n&&r(e.prototype,n),o&&r(e,o),e}}();var o=function(){function r(){!function(r,e){if(!(r instanceof e))throw new TypeError("Cannot call a class as a function")}(this,r)}return n(r,[{key:"handleLogin",value:function(){$(".login-form").validate({errorElement:"span",errorClass:"help-block",focusInvalid:!1,rules:{username:{required:!0},password:{required:!0},remember:{required:!1}},messages:{username:{required:"Username is required."},password:{required:"Password is required."}},invalidHandler:function(){$(".alert-danger",$(".login-form")).show()},highlight:function(r){$(r).closest(".form-group").addClass("has-error")},success:function(r){r.closest(".form-group").removeClass("has-error"),r.remove()},errorPlacement:function(r,e){r.insertAfter(e.closest(".form-control"))},submitHandler:function(r){r.submit()}}),$(".login-form input").keypress(function(r){if(13===r.which)return $(".login-form").validate().form()&&$(".login-form").submit(),!1})}},{key:"handleForgetPassword",value:function(){$(".forget-form").validate({errorElement:"span",errorClass:"help-block",focusInvalid:!1,ignore:"",rules:{email:{required:!0,email:!0}},messages:{email:{required:"Email is required."}},invalidHandler:function(){$(".alert-danger",$(".forget-form")).show()},highlight:function(r){$(r).closest(".form-group").addClass("has-error")},success:function(r){r.closest(".form-group").removeClass("has-error"),r.remove()},errorPlacement:function(r,e){r.insertAfter(e.closest(".form-control"))},submitHandler:function(r){r.submit()}}),$(".forget-form input").keypress(function(r){if(13===r.which)return $(".forget-form").validate().form()&&$(".forget-form").submit(),!1})}},{key:"init",value:function(){this.handleLogin(),this.handleForgetPassword()}}]),r}();$(document).ready(function(){(new o).init()})}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 89);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 89:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(90);
+
+
+/***/ }),
+
+/***/ 90:
+/***/ (function(module, exports) {
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Login = function () {
+    function Login() {
+        _classCallCheck(this, Login);
+    }
+
+    _createClass(Login, [{
+        key: 'handleLogin',
+        value: function handleLogin() {
+
+            $('.login-form').validate({
+                errorElement: 'span', //default input error message container
+                errorClass: 'help-block', // default input error message class
+                focusInvalid: false, // do not focus the last invalid input
+                rules: {
+                    username: {
+                        required: true
+                    },
+                    password: {
+                        required: true
+                    },
+                    remember: {
+                        required: false
+                    }
+                },
+
+                messages: {
+                    username: {
+                        required: 'Username is required.'
+                    },
+                    password: {
+                        required: 'Password is required.'
+                    }
+                },
+
+                invalidHandler: function invalidHandler() {
+                    //display error alert on form submit
+                    $('.alert-danger', $('.login-form')).show();
+                },
+
+                highlight: function highlight(element) {
+                    // hightlight error inputs
+                    $(element).closest('.form-group').addClass('has-error'); // set error class to the control group
+                },
+
+                success: function success(label) {
+                    label.closest('.form-group').removeClass('has-error');
+                    label.remove();
+                },
+
+                errorPlacement: function errorPlacement(error, element) {
+                    error.insertAfter(element.closest('.form-control'));
+                },
+
+                submitHandler: function submitHandler(form) {
+                    form.submit(); // form validation success, call ajax form submit
+                }
+            });
+
+            $('.login-form input').keypress(function (e) {
+                if (e.which === 13) {
+                    if ($('.login-form').validate().form()) {
+                        $('.login-form').submit(); //form validation success, call ajax form submit
+                    }
+                    return false;
+                }
+            });
+        }
+    }, {
+        key: 'handleForgetPassword',
+        value: function handleForgetPassword() {
+            $('.forget-form').validate({
+                errorElement: 'span', //default input error message container
+                errorClass: 'help-block', // default input error message class
+                focusInvalid: false, // do not focus the last invalid input
+                ignore: '',
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    }
+                },
+
+                messages: {
+                    email: {
+                        required: 'Email is required.'
+                    }
+                },
+
+                invalidHandler: function invalidHandler() {
+                    //display error alert on form submit
+                    $('.alert-danger', $('.forget-form')).show();
+                },
+
+                highlight: function highlight(element) {
+                    // hightlight error inputs
+                    $(element).closest('.form-group').addClass('has-error'); // set error class to the control group
+                },
+
+                success: function success(label) {
+                    label.closest('.form-group').removeClass('has-error');
+                    label.remove();
+                },
+
+                errorPlacement: function errorPlacement(error, element) {
+                    error.insertAfter(element.closest('.form-control'));
+                },
+
+                submitHandler: function submitHandler(form) {
+                    form.submit();
+                }
+            });
+
+            $('.forget-form input').keypress(function (e) {
+                if (e.which === 13) {
+                    if ($('.forget-form').validate().form()) {
+                        $('.forget-form').submit();
+                    }
+                    return false;
+                }
+            });
+        }
+    }, {
+        key: 'init',
+        value: function init() {
+            this.handleLogin();
+            this.handleForgetPassword();
+        }
+    }]);
+
+    return Login;
+}();
+
+$(document).ready(function () {
+    new Login().init();
+});
+
+/***/ })
+
+/******/ });

@@ -1,1 +1,245 @@
-!function(e){function t(a){if(r[a])return r[a].exports;var n=r[a]={i:a,l:!1,exports:{}};return e[a].call(n.exports,n,n.exports,t),n.l=!0,n.exports}var r={};t.m=e,t.c=r,t.d=function(e,r,a){t.o(e,r)||Object.defineProperty(e,r,{configurable:!1,enumerable:!0,get:a})},t.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(r,"a",r),r},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="/",t(t.s=106)}({106:function(e,t,r){e.exports=r(107)},107:function(e,t){var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(e){"use strict";function t(t){return this.each(function(){var n=e(this),i=n.data("bs.media"),o=e.extend({},n.data(),"object"===(void 0===t?"undefined":r(t))&&t);i||n.data("bs.media",i=new a(this,o))})}var a=function(t,r){this.options=r,e(t).rvMedia({multiple:!0,onSelectFiles:function(t,a){if(void 0!==t)switch(a.data("editor")){case"summernote":!function(t,r){if(0!==r.length)for(var a=t.data("target"),n=0;n<r.length;n++)if("youtube"===r[n].type||"video"===r[n].type){var i=r[n].full_url;i=i.replace("watch?v=","embed/"),e(a).summernote("pasteHTML",'<iframe width="420" height="315" src="'+i+'" frameborder="0" allowfullscreen></iframe>')}else"image"===r[n].type?e(a).summernote("insertImage",r[n].full_url,r[n].basename):e(a).summernote("pasteHTML",'<a href="'+r[n].full_url+'">'+r[n].full_url+"</a>")}(a,t);break;case"wysihtml5":!function(e,t){if(0!==t.length){for(var r="",a=0;a<t.length;a++)if("youtube"===t[a].type||"video"===t[a].type){var n=t[a].full_url;n=n.replace("watch?v=","embed/"),r+='<iframe width="420" height="315" src="'+n+'" frameborder="0" allowfullscreen></iframe>'}else"image"===t[a].type?r+='<img src="'+t[a].full_url+'">':r+='<a href="'+t[a].full_url+'">'+t[a].full_url+"</a>";if(e.getValue().length>0){var i=e.getValue();e.composer.commands.exec("insertHTML",r),e.getValue()===i&&e.setValue(e.getValue()+r)}else e.setValue(e.getValue()+r)}}(e(r.target).data("wysihtml5").editor,t);break;case"ckeditor":!function(t,r){e.each(r,function(e,r){var a=r.full_url,n=t.data("target").replace("#","");"youtube"===r.type||"video"===r.type?(a=a.replace("watch?v=","embed/"),CKEDITOR.instances[n].insertHtml('<iframe width="420" height="315" src="'+a+'" frameborder="0" allowfullscreen></iframe>')):"image"===r.type?CKEDITOR.instances[n].insertHtml('<img src="'+a+'" alt="'+r.name+'" />'):CKEDITOR.instances[n].insertHtml('<a href="'+a+'">'+r.name+"</a>")})}(a,t);break;case"tinymce":!function(t){e.each(t,function(e,t){var r=t.url,a="";"youtube"===t.type||"video"===t.type?(r=r.replace("watch?v=","embed/"),a='<iframe width="420" height="315" src="'+r+'" frameborder="0" allowfullscreen></iframe>'):a="image"===t.type?'<img src="'+r+'" alt="'+t.name+'" />':'<a href="'+r+'">'+t.name+"</a>",tinymce.activeEditor.execCommand("mceInsertContent",!1,a)})}(t)}}})};a.VERSION="1.1.0",e.fn.addMedia=t,e.fn.addMedia.Constructor=a,e(window).on("load",function(){e('[data-type="rv-media"]').each(function(){var r=e(this);t.call(r,r.data())})})}(jQuery)}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 117);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 117:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(118);
+
+
+/***/ }),
+
+/***/ 118:
+/***/ (function(module, exports) {
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/* ========================================================================
+ * AddMedia.js v1.0
+ * Requires Botble Media
+ * ======================================================================== */
+
++function ($) {
+    'use strict';
+
+    /**
+     * @param element
+     * @param options
+     * @constructor
+     */
+
+    var AddMedia = function AddMedia(element, options) {
+        this.options = options;
+        $(element).rvMedia({
+            multiple: true,
+            onSelectFiles: function onSelectFiles(files, $el) {
+                if (typeof files !== 'undefined') {
+                    switch ($el.data('editor')) {
+                        case 'summernote':
+                            handleInsertImagesForSummerNote($el, files);
+                            break;
+                        case 'wysihtml5':
+                            var editor = $(options.target).data('wysihtml5').editor;
+                            handleInsertImagesForWysihtml5Editor(editor, files);
+                            break;
+                        case 'ckeditor':
+                            handleForCkeditor($el, files);
+                            break;
+                        case 'tinymce':
+                            handleForTinyMce(files);
+                            break;
+                    }
+                }
+            }
+        });
+    };
+
+    AddMedia.VERSION = '1.1.0';
+
+    /**
+     * Insert images to summernote editor
+     * @param $el
+     * @param files
+     */
+    function handleInsertImagesForSummerNote($el, files) {
+        if (files.length === 0) {
+            return;
+        }
+
+        var instance = $el.data('target');
+        for (var i = 0; i < files.length; i++) {
+            if (files[i].type === 'youtube' || files[i].type === 'video') {
+                var link = files[i].full_url;
+                link = link.replace('watch?v=', 'embed/');
+                $(instance).summernote('pasteHTML', '<iframe width="420" height="315" src="' + link + '" frameborder="0" allowfullscreen></iframe>');
+            } else if (files[i].type === 'image') {
+                $(instance).summernote('insertImage', files[i].full_url, files[i].basename);
+            } else {
+                $(instance).summernote('pasteHTML', '<a href="' + files[i].full_url + '">' + files[i].full_url + '</a>');
+            }
+        }
+    }
+
+    /**
+     * Insert images to Wysihtml5 editor
+     * @param editor
+     * @param files
+     */
+    function handleInsertImagesForWysihtml5Editor(editor, files) {
+        if (files.length === 0) {
+            return;
+        }
+
+        // insert images for the wysihtml5 editor
+        var s = '';
+        for (var i = 0; i < files.length; i++) {
+            if (files[i].type === 'youtube' || files[i].type === 'video') {
+                var link = files[i].full_url;
+                link = link.replace('watch?v=', 'embed/');
+                s += '<iframe width="420" height="315" src="' + link + '" frameborder="0" allowfullscreen></iframe>';
+            } else if (files[i].type === 'image') {
+                s += '<img src="' + files[i].full_url + '">';
+            } else {
+                s += '<a href="' + files[i].full_url + '">' + files[i].full_url + '</a>';
+            }
+        }
+
+        if (editor.getValue().length > 0) {
+            var length = editor.getValue();
+            editor.composer.commands.exec('insertHTML', s);
+            if (editor.getValue() === length) {
+                editor.setValue(editor.getValue() + s);
+            }
+        } else {
+            editor.setValue(editor.getValue() + s);
+        }
+    }
+
+    /**
+     * @param $el
+     * @param files
+     */
+    function handleForCkeditor($el, files) {
+        $.each(files, function (index, file) {
+            var link = file.full_url;
+            var instance = $el.data('target').replace('#', '');
+            if (file.type === 'youtube' || file.type === 'video') {
+                link = link.replace('watch?v=', 'embed/');
+                CKEDITOR.instances[instance].insertHtml('<iframe width="420" height="315" src="' + link + '" frameborder="0" allowfullscreen></iframe>');
+            } else if (file.type === 'image') {
+                CKEDITOR.instances[instance].insertHtml('<img src="' + link + '" alt="' + file.name + '" />');
+            } else {
+                CKEDITOR.instances[instance].insertHtml('<a href="' + link + '">' + file.name + '</a>');
+            }
+        });
+    }
+
+    /**
+     * @param files
+     */
+    function handleForTinyMce(files) {
+        $.each(files, function (index, file) {
+            var link = file.url;
+            var html = '';
+            if (file.type === 'youtube' || file.type === 'video') {
+                link = link.replace('watch?v=', 'embed/');
+                html = '<iframe width="420" height="315" src="' + link + '" frameborder="0" allowfullscreen></iframe>';
+            } else if (file.type === 'image') {
+                html = '<img src="' + link + '" alt="' + file.name + '" />';
+            } else {
+                html = '<a href="' + link + '">' + file.name + '</a>';
+            }
+            tinymce.activeEditor.execCommand('mceInsertContent', false, html);
+        });
+    }
+
+    /**
+     * @param option
+     */
+    function callAction(option) {
+        return this.each(function () {
+            var $this = $(this);
+            var data = $this.data('bs.media');
+            var options = $.extend({}, $this.data(), (typeof option === 'undefined' ? 'undefined' : _typeof(option)) === 'object' && option);
+            if (!data) $this.data('bs.media', data = new AddMedia(this, options));
+        });
+    }
+
+    $.fn.addMedia = callAction;
+    $.fn.addMedia.Constructor = AddMedia;
+
+    $(window).on('load', function () {
+        $('[data-type="rv-media"]').each(function () {
+            var $addMedia = $(this);
+            callAction.call($addMedia, $addMedia.data());
+        });
+    });
+}(jQuery);
+
+/***/ })
+
+/******/ });
