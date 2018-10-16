@@ -794,9 +794,9 @@ th {
     right: -50px;
     background-color: #fff;
     border: 40px solid transparent;
-    border-right: 40px solid #222;
-    border-bottom: 0 solid #222;
-    border-left: 0 solid #222;
+    border-right: 40px solid #003880;
+    border-bottom: 0 solid #003880;
+    border-left: 0 solid #003880;
   }
 
   .sidebar-item-head span:after {
@@ -4618,4 +4618,3 @@ ul.pagination li {
 ul.pagination li.active span {
   background: #f08301;
 }
-
