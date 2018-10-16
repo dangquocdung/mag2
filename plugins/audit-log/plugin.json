@@ -3,7 +3,7 @@
     "namespace": "Botble\\AuditLog\\",
     "provider": "Botble\\AuditLog\\Providers\\AuditLogServiceProvider",
     "author": "Dung Thinh",
-    "url": "http://sangnguyen.info",
+    "url": "http://dungthinh.com",
     "version": "2.6",
     "description": "Record activities logs"
 }

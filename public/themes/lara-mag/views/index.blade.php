@@ -80,6 +80,7 @@
                 </section><!-- end .block-post-wrap -->
                 @endforeach
             @endif
+            
             @if (function_exists('get_galleries'))
                 @php $galleries = get_galleries(8); Gallery::registerAssets(); @endphp
                 @if (!$galleries->isEmpty())

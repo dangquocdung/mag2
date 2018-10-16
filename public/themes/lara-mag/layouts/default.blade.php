@@ -20,6 +20,7 @@
     {!! Theme::header() !!}
 </head>
 <body class="home blog">
+   
         {!! Theme::partial('header') !!}
 
         <div class="container">

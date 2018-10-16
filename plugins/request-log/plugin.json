@@ -3,7 +3,7 @@
     "namespace": "Botble\\RequestLog\\",
     "provider": "Botble\\RequestLog\\Providers\\RequestLogServiceProvider",
     "author": "Dung Thinh",
-    "url": "http://sangnguyen.info",
+    "url": "http://dungthinh.com",
     "version": "3.0",
     "description": "Log error requests"
 }

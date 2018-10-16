@@ -3,7 +3,7 @@
     "namespace": "Botble\\Note\\",
     "provider": "Botble\\Note\\Providers\\NoteServiceProvider",
     "author": "Dung Thinh",
-    "url": "http://sangnguyen.info",
+    "url": "http://dungthinh.com",
     "version": "2.6",
     "description": "Allow to add note when editing page, post..."
 }

@@ -3,7 +3,7 @@
     "namespace": "Botble\\Blog\\",
     "provider": "Botble\\Blog\\Providers\\BlogServiceProvider",
     "author": "Dung Thinh",
-    "url": "http://sangnguyen.info",
+    "url": "http://dungthinh.com",
     "version": "2.7",
     "description": "Manage posts, categories, tags"
 }

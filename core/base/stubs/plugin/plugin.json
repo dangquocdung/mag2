@@ -3,7 +3,7 @@
     "namespace": "Botble\\{Plugin}\\",
     "provider": "Botble\\{Plugin}\\Providers\\{Plugin}ServiceProvider",
     "author": "Dung Thinh",
-    "url": "http://sangnguyen.info",
+    "url": "http://dungthinh.com",
     "version": "1.0",
     "description": "The description for plugin {plugin}"
 }

@@ -3,7 +3,7 @@
     "namespace": "Botble\\MaintenanceMode\\",
     "provider": "Botble\\MaintenanceMode\\Providers\\MaintenanceModeServiceProvider",
     "author": "Dung Thinh",
-    "url": "http://sangnguyen.info",
+    "url": "http://dungthinh.com",
     "version": "1.0",
     "description": "The description for plugin maintenance_mode"
 }

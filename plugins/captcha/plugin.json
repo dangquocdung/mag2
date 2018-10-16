@@ -3,7 +3,7 @@
   "namespace": "Botble\\Captcha\\",
   "provider": "Botble\\Captcha\\Providers\\CaptchaServiceProvider",
   "author": "Dung Thinh",
-  "url": "http://sangnguyen.info",
+  "url": "http://dungthinh.com",
   "version": "2.6",
   "description": "Captcha for higher security"
 }

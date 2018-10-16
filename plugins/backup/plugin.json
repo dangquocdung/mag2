@@ -3,7 +3,7 @@
     "namespace": "Botble\\Backup\\",
     "provider": "Botble\\Backup\\Providers\\BackupServiceProvider",
     "author": "Dung Thinh",
-    "url": "http://sangnguyen.info",
+    "url": "http://dungthinh.com",
     "version": "2.6",
     "description": "Backup & restore database, uploads folder"
 }
