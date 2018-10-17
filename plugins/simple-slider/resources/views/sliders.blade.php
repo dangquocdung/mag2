@@ -7,7 +7,7 @@
                 <article class="post post-home-slider">
                     <div class="post-thumbnail">
                         <a href="{{ $slider->link }}" class="overlay"></a>
-                        <img src="{{ get_object_image($slider->image) }}" alt="{{ $slider->title }}">
+                        <img src="{{ get_object_image($slider->image) }}" alt="{{ $slider->title }}" width="100%">
                     </div>
                     <header class="entry-header">
                         <h2 class="entry-title">{{ $slider->title }}</h2>
