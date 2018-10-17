@@ -11,7 +11,7 @@
                     </div>
                     <header class="entry-header">
                         <h2 class="entry-title">{{ $slider->title }}</h2>
-                        <span class="apart-address" style="hidden-xs">{{ $slider->description }}</span>
+                        <span class="apart-address hidden-xs">{{ $slider->description }}</span>
                     </header>
                 </article>
             @endforeach
