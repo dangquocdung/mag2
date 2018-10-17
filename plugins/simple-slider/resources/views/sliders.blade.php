@@ -6,7 +6,7 @@
             @foreach($sliders as $slider)
                 <article class="post post-home-slider">
                     <div class="post-thumbnail">
-                        <a href="{{ $slider->link }}" class="overlay"></a>
+                        <a href="{{ $slider->link }}" class="overlay" target="_blank"></a>
                         <img src="{{ get_object_image($slider->image) }}" alt="{{ $slider->title }}" width="100%">
                     </div>
                     <header class="entry-header">
