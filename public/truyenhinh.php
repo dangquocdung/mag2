@@ -23,4 +23,4 @@
 
 </script>
 </body>
-<span style='position:absolute;top:10px;right:10px;font-size: 13px; font-weight: bold;color: #ff0;'><em>LINK 2</em></span>
+<!-- <span style='position:absolute;top:10px;right:10px;font-size: 13px; font-weight: bold;color: #ff0;'><em>LINK 2</em></span> -->
