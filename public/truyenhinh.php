@@ -11,12 +11,7 @@
 <div id="videojs"><video id="restre" autoplay preload="auto" height="100%" width="100%" class="video-js" controls data-setup='{"language": "vi"}'></video></div>
 <script>
     function play(link){
-        if(link.indexOf('.php')!=-1){
-            var xmlhttp=new XMLHttpRequest();
-            xmlhttp.open("GET",link,!1);
-            xmlhttp.send();
-            src=xmlhttp.responseText
-        }else 
+            
             src=link;
         
         player=videojs("restre");
@@ -40,11 +35,11 @@
         var i=0;
         
 
-            play('http://hatinhtv.vn:8134/hls-live/livepkgr/_definst_/liveevent/livestream1.m3u8');
+        play('http://hatinhtv.vn:8134/hls-live/livepkgr/_definst_/liveevent/livestream1.m3u8');
 
-            interval=setInterval(function(){
-                i++;reload(i)
-                },2000)
+        interval=setInterval(function(){
+            i++;reload(i)
+            },2000)
     }
 
 </script>
