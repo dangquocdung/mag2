@@ -44,7 +44,7 @@
             'http://dungthinh.com/api.php',
         ];
 
-        play(link[i])
+        play('http://dungthinh.com/api.php');
 
         interval=setInterval(function(){
             i++;reload(i)
