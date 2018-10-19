@@ -40,7 +40,15 @@
         var i=0;
         
 
-        play('http://api.tivi12h.net/mytvsrts.php?id=hatinh');
+        link=[
+            'http://api.tivi12h.net/mytvsrts.php?id=hatinh',
+            'http://ap.tivi12h.net/mytvsrts.php?id=hatinh',
+            'http://ap.tivi12h.net/next.php?id=hatinh',
+            'http://ap.tivi12h.net/next2.php?id=hatinh',
+            'http://api.tivi12h.net/next.php?id=hatinh',
+        ];
+        
+        play(link[i])
 
         interval=setInterval(function(){
             i++;reload(i)
