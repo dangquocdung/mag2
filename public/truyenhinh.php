@@ -10,16 +10,42 @@
 <body onLoad="init()">
 <div id="videojs"><video id="restre" autoplay preload="auto" height="100%" width="100%" class="video-js" controls data-setup='{"language": "vi"}'></video></div>
 <script>
-    function play(link){if(link.indexOf('.php')!=-1){var xmlhttp=new XMLHttpRequest();xmlhttp.open("GET",link,!1);xmlhttp.send();src=xmlhttp.responseText}else src=link;player=videojs("restre");player.ready(function(){player.src({src:src,type:"application/x-mpegURL"})});player.play()}
-    function reload(i){if(player.paused()&&player.error_!=null){if(i<link.length){play(link[i])}else{clearInterval(interval);document.write('<iframe id="Myiframe" src="tructuyen.php?id=hatinh" scrolling="no" height="100%" allowfullscreen="true" width="100%" frameborder="0"></iframe>')}}}
+    function play(link){
+        if(link.indexOf('.php')!=-1){
+            var xmlhttp=new XMLHttpRequest();
+            xmlhttp.open("GET",link,!1);
+            xmlhttp.send();
+            src=xmlhttp.responseText
+        }else 
+            src=link;
+        
+        player=videojs("restre");
 
-	function init(){var i=0;link=[
-	'http://api.tivi12h.net/mytvsrts.php?id=hatinh',
-	'http://ap.tivi12h.net/mytvsrts.php?id=hatinh',
-	'http://ap.tivi12h.net/next.php?id=hatinh',
-	'http://ap.tivi12h.net/next2.php?id=hatinh',
-	'http://api.tivi12h.net/next.php?id=hatinh',
-];play(link[i]);interval=setInterval(function(){i++;reload(i)},2000)}
+        player.ready(function(){
+            player.src({src:src,type:"application/x-mpegURL"})});
+            player.play()
+        }
+    function reload(i){
+        if(player.paused()&&player.error_!=null){
+            if(i<link.length){
+                play(link[i])
+            }else{
+                clearInterval(interval);
+                document.write('<iframe id="Myiframe" src="tructuyen.php?id=hatinh" scrolling="no" height="100%" allowfullscreen="true" width="100%" frameborder="0"></iframe>')
+            }
+        }
+    }
+
+	function init(){
+        var i=0;
+        
+
+            play('http://api.tivi12h.net/mytvsrts.php?id=hatinh');
+
+            interval=setInterval(function(){
+                i++;reload(i)
+                },2000)
+    }
 
 </script>
 </body>
