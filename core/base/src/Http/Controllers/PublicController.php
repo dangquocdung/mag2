@@ -95,6 +95,7 @@ class PublicController extends Controller
 
         return abort(404);
     }
+    
 
     /**
      * @return mixed
