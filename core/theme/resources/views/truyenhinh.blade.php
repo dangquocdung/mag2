@@ -3,11 +3,11 @@
 <style>html,body{margin:0;}</style>
 <style> .video-js {width: 100%; height: 100%;} #videojs {width: 100%; height: 100%;}</style>
 <meta name="referrer" content="no-referrer">
-<link href="https://rawgit.com/xbdinfo/file/5ca03205/video-js.min.css" rel="stylesheet">
-<script src="https://rawgit.com/xbdinfo/file/5ca03205/videojs-ie8.min.js"></script>
-<script src="https://rawgit.com/xbdinfo/file/5ca03205/video.min.js"></script>
-<script src="https://rawgit.com/xbdinfo/file/5ca03205/videojs-contrib-hls.min.js"></script>
-<script src="https://rawgit.com/xbdinfo/file/5ca03205/vjs-hls.min.js"></script>
+<link href="/themes/lara-mag/assets/css/video-js.min.css" rel="stylesheet">
+<script src="/themes/lara-mag/assets/js/videojs-ie8.min.js"></script>
+<script src="/themes/lara-mag/assets/js/video.min.js"></script>
+<script src="/themes/lara-mag/assets/js/videojs-contrib-hls.min.js"></script>
+<script src="/themes/lara-mag/assets/js/vjs-hls.min.js"></script>
 <body onLoad="init()">
 <div id="videojs"><video id="restre" autoplay preload="auto" height="100%" width="100%" class="video-js" controls data-setup='{"language": "vi"}'></video></div>
 <script>
