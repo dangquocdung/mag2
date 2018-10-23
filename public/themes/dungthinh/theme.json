@@ -1,0 +1,13 @@
+{
+    "name": "Dungthinh",
+    "description": "This is a basic theme",
+    "author": "Dung Thinh",
+    "version": "1.0",
+    "required_plugins": [
+        "blog",
+        "contact",
+        "gallery",
+        "language",
+        "simple-slider"
+    ]
+}
