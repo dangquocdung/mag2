@@ -42,11 +42,11 @@
         
 
         link=[
-            'http://api.tivi12h.net/mytvsrts.php?id=hatinh',
-            'http://ap.tivi12h.net/mytvsrts.php?id=hatinh',
-            'http://ap.tivi12h.net/next.php?id=hatinh',
-            'http://ap.tivi12h.net/next2.php?id=hatinh',
             'http://api.tivi12h.net/next.php?id=hatinh',
+	        'http://ap.tivi12h.net/next.php?id=hatinh',
+	        'http://ap.tivi12h.net/next1.php?id=hatinh',
+	        'http://api.tivi12h.net/mytvsrts.php?id=hatinh',
+	        'http://ap.tivi12h.net/mytvsrts.php?id=hatinh',
         ];
         
         play(link[i]);
